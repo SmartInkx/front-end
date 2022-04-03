@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ContatoComponent } from './contato/contato.component';
 import { EngrenagemComponent } from './engrenagem/engrenagem.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { EngrenagemComponent } from './engrenagem/engrenagem.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
