@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SmartInkComponent } from './smart-ink/smart-ink.component';
-
+import { HomeComponent } from './home/home.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { ContatoComponent } from './contato/contato.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SmartInkComponent
+    HomeComponent,
+    ClientesComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
