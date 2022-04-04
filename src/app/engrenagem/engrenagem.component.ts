@@ -22,15 +22,3 @@ export class EngrenagemComponent implements OnInit {
   }
 }
 
-export class Dialog {
-  constructor(public dialog: MatDialog){}
-  openDialog() {
-    const dialogRef = this.dialog.open(Dialogo);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-}
-export class Dialogo{}
-
