@@ -9,16 +9,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class EngrenagemComponent implements OnInit {
 
-  login: Array<any>;
 
-  constructor(private engrenagemService: EngrenagemService) { }
+  constructor() { }
 
 
   ngOnInit(): void {
-    this.listar();
-  }
-
-  listar(){
-    this.engrenagemService.listar().subscribe(dados => this.login = dados);
   }
 }
