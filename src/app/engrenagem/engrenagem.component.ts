@@ -1,5 +1,6 @@
-import { EngrenagemService } from './engrenagem.service';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-engrenagem',
@@ -10,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 export class EngrenagemComponent implements OnInit {
 
 
-  constructor() { }
-
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalComponent);
+
+    // dialogRef.afterClosed().subscribe(result => {});
   }
 }

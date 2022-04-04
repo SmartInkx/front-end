@@ -13,6 +13,7 @@ import { EngrenagemComponent } from './engrenagem/engrenagem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngrenagemService } from './engrenagem/engrenagem.service';
 import { LoginComponent } from './login/login.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     ClientesComponent,
     ContatoComponent,
     EngrenagemComponent,
-    LoginComponent
+    LoginComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +31,9 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [ EngrenagemService ],
-  bootstrap: [AppComponent]
+  providers: [EngrenagemService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
