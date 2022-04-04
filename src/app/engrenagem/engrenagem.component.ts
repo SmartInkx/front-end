@@ -1,17 +1,18 @@
 import { EngrenagemService } from './engrenagem.service';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-engrenagem',
   templateUrl: './engrenagem.component.html',
   styleUrls: ['./engrenagem.component.scss']
 })
+
 export class EngrenagemComponent implements OnInit {
 
   login: Array<any>;
 
   constructor(private engrenagemService: EngrenagemService) { }
+
 
   ngOnInit(): void {
     this.listar();
