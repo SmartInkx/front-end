@@ -21,4 +21,3 @@ export class EngrenagemComponent implements OnInit {
     this.engrenagemService.listar().subscribe(dados => this.login = dados);
   }
 }
-

@@ -1,3 +1,4 @@
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { EngrenagemComponent } from './engrenagem/engrenagem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngrenagemService } from './engrenagem/engrenagem.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { EngrenagemService } from './engrenagem/engrenagem.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [ EngrenagemService ],
   bootstrap: [AppComponent]

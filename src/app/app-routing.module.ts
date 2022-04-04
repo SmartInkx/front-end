@@ -1,4 +1,3 @@
-import { ModalComponent } from './engrenagem/modal/modal.component';
 import { EngrenagemComponent } from './engrenagem/engrenagem.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ClientesComponent } from './clientes/clientes.component';
