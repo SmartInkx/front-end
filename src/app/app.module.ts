@@ -11,6 +11,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { EngrenagemComponent } from './engrenagem/engrenagem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngrenagemService } from './engrenagem/engrenagem.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EngrenagemService } from './engrenagem/engrenagem.service';
     HomeComponent,
     ClientesComponent,
     ContatoComponent,
-    EngrenagemComponent
+    EngrenagemComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
