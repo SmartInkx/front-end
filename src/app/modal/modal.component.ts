@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  contatos: Array<any>;
+  contato: any;
+
+  constructor() {}
 
   ngOnInit(): void {
   }
-
 }

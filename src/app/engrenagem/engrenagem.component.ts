@@ -10,7 +10,6 @@ import { ModalComponent } from '../modal/modal.component';
 
 export class EngrenagemComponent implements OnInit {
 
-
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -19,6 +18,6 @@ export class EngrenagemComponent implements OnInit {
   openDialog() {
     const dialogRef = this.dialog.open(ModalComponent);
 
-    // dialogRef.afterClosed().subscribe(result => {});
+    dialogRef.afterClosed()
   }
 }
