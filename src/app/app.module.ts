@@ -15,6 +15,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EngrenagemService } from './engrenagem/engrenagem.service';
 import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
+import { OrcamentoComponent } from './orcamento/orcamento.component';
+import { TattooComponent } from './tattoo/tattoo.component';
+import { PercingComponent } from './percing/percing.component';
+import { ModalTattoComponent } from './modal-tattoo/modal-tatto.component';
+import { ModalPercingComponent } from './modal-percing/modal-percing.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { ModalComponent } from './modal/modal.component';
     EngrenagemComponent,
     LoginComponent,
     ModalComponent,
+    OrcamentoComponent,
+    TattooComponent,
+    PercingComponent,
+    ModalTattoComponent,
+    ModalPercingComponent,
   ],
   imports: [
     BrowserModule,
