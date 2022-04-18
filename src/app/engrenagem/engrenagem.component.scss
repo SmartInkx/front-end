@@ -11,48 +11,34 @@ body {
   background-size: cover;
 }
 
-.menu {
-  list-style: none;
-  // border:1px solid black;
-  float: left;
-}
-.menu li {
-  position: relative;
-  float: left;
+.matMenu {
+  font-size: large;
 }
 
-.menu li button {
-  background-color: rgb(199, 185, 185);
-  margin-top: 15px;
+.mat-button {
+  box-shadow: 0px 0px 0px 2px #dcdee3;
+	background:linear-gradient(to bottom,#f8f8f8 5%, #dae0e6 100%);
+	// background-color:#000000;
+	border-radius:10px;
+	// border:1px solid #030305;
+	display:inline-block;
+	cursor:pointer;
+	color:#0c0c0c;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	// text-shadow:0px 1px 0px #2e3036;
+  margin: 0 40px;
 }
 
-.menu li a {
-  color: white;
-  text-decoration: none;
-  padding: 25px 33px;
-  display: block;
+.mat-button:hover {
+  background:linear-gradient(to bottom, #dae0e6 5%, #000000 100%);
+	background-color:#dae0e6;
 }
 
-.menu li a:hover {
-  background: white;
-  color: black;
-  text-shadow: 0px 0px 5px #fff;
-}
-.menu li ul {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  background-color: black;
-  display: none;
+.mat-button:active {
+  position:relative;
+	top:1px;
 }
 
-.menu li:hover ul,
-.menu li.over ul {
-  display: block;
-}
-
-.menu li ul li {
-  border: 1px solid #c0c0c0;
-  display: block;
-  width: 190px;
-}
