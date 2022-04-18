@@ -7,8 +7,20 @@
     <title>Orçamento</title>
   </head>
   <body>
-    <h1>Teste dos orçamentos</h1>
-    <button mat-raised-button (click)="abreDialog()">Tattoo</button>
-    <button mat-raised-button (click)="openDialog()">Piercing</button>
+    <h1>Orçamentos</h1>
+    <h2>Olá, sejam bem-vindos a nossa página de Orçamentos.</h2>
+    <h3>
+      Abaixo temos duas modalidades de orçamentos. Se atentem ao escolher qual
+      você deseja.
+    </h3>
+    <mat-card class="card-tattoo">
+      <img mat-card-lg-image src="https://cdn-icons.flaticon.com/png/512/4358/premium/4358299.png?token=exp=1650246930~hmac=51f0dce4abd7e11dfbdbe7e90fdbc818" >
+      <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">Tattoo</button>
+    </mat-card>
+
+    <mat-card class="card-piercing">
+      <img mat-card-lg-image src="https://cdn-icons-png.flaticon.com/512/3468/3468137.png" >
+      <button class="bt-piercing" mat-raised-button (click)="openDialog()">Piercing</button>
+    </mat-card>
   </body>
 </html>
