@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class TattooService {
-  orcamentoTattooUrl = '';
-  loginUrl = '';
+  orcamentoTattooUrl = 'api/orcamento/uploadFile';
+  loginUrl = 'api/orcamento/enviarOrcamentoTatuagem';
 
   constructor(private http: HttpClient) {}
 
@@ -15,8 +15,7 @@ export class TattooService {
   }
 
   uploadImage (formData: any) {
-    return this.http.post(this.orcamentoTattooUrl, formData).subscribe(resposta => console.log("Salvei"));
-
+    return this.http.post(this.orcamentoTattooUrl, formData);
   }
 }
 

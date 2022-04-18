@@ -4,19 +4,22 @@ import { TattooService } from './tattoo.service';
 @Component({
   selector: 'app-tattoo',
   templateUrl: './tattoo.component.html',
-  styleUrls: ['./tattoo.component.scss']
+  styleUrls: ['./tattoo.component.scss'],
 })
 export class TattooComponent implements OnInit {
   orcamentos: Array<any>;
-  orcamento: any
+  orcamento: any;
+  uploadedImage: File;
+  image: any;
 
-  constructor(private service: TattooService) { }
+  constructor(private service: TattooService) {}
+
 
   ngOnInit(): void {
     this.orcamento = {};
   }
 
-  orcamentoTattoo(ott){
+  orcamentoTattoo(ott) {
     this.service.orcamentoTattoo(this.orcamento).subscribe((resposta) => {
       this.orcamentos.push(resposta);
 
@@ -24,12 +27,12 @@ export class TattooComponent implements OnInit {
     });
   }
 
-  uploadImage(event) {
-    const imagem = event.target.files[0];
-    const formData = new FormData();
-    formData.append('imagem', imagem);
+  onUploadImage(event) {
+    this.uploadedImage = event.target.files[0];
+  }
+
+  imageUploadAction() {
+    const imageFormData = new FormData();
+    formData.append('file', this.onUploadedImage);
   }
 }
-
-
-

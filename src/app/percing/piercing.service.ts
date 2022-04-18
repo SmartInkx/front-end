@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PiercingService {
-  orcamentoPiercingUrl = '';
+  orcamentoPiercingUrl = 'api/orcamento/enviarOrcamentoPiercing';
 
   constructor(private http: HttpClient) {}
 
