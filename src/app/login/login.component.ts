@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.contato = {};
   }
+
   criar(frm) {
     this.service.criar(this.contato).subscribe((resposta) => {
       this.contatos.push(resposta);

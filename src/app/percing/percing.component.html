@@ -6,21 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orçamento - Piercing</title>
   </head>
-  <body>
-    <form>
-      <input>Nome:
-      <input>Cel:
-      <input>E-mail:
-      <input type="radio"> Tragus
-      <input type="radio"> Umbigo
-      <input type="radio"> Septo
-      <input type="radio"> Mãos
-      <input type="radio"> Nariz
-      <input type="radio"> Mamilos
-      <input type="radio"> Lábios
-      <input type="text"> Outros:
-      <button type="submit">Salvar</button>
-      <button type="submit">Cancelar</button>
-    </form>
-  </body>
+  <body></body>
 </html>
+<section class="main">
+  <div class="container">
+    <form method="post" #otp="ngForm" (ngSubmit)="orcamentoPiercing(otp)">
+      <div class="form-group">
+        <label for="name">Nome: </label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          class="form-control"
+          placeholder="Digite seu nome"
+          [(ngModel)]="orcamento.nome"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Cel: </label>
+        <input
+          type="tel"
+          id="numero"
+          name="numero"
+          class="form-control"
+          placeholder="Digite seu numero"
+          [(ngModel)]="orcamento.numero"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">E-mail: </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          class="form-control"
+          placeholder="Digite seu e-mail"
+          [(ngModel)]="orcamento.email"
+          required
+        />
+        <div>
+          <img
+            src="./.././../assets/piercing.jpg"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="outros">Outros: </label>
+        <input
+          type="text"
+          id="outros"
+          name="outros"
+          class="form-control"
+          placeholder="Digite aqui sua sugestão"
+          [(ngModel)]="orcamento.outros"
+        />
+      </div>
+      <div>
+        <button mat-raised-button [mat-dialog-close]="true" type="submit">
+          Salvar
+        </button>
+        <button mat-raised-button [mat-dialog-close]>Cancelar</button>
+      </div>
+    </form>
+  </div>
+</section>
