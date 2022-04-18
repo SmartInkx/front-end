@@ -27,12 +27,12 @@ export class TattooComponent implements OnInit {
     });
   }
 
-  onUploadImage(event) {
-    this.uploadedImage = event.target.files[0];
-  }
+  // onUploadImage(event) {
+  //   this.uploadedImage = event.target.files[0];
+  // }
 
-  imageUploadAction() {
-    const imageFormData = new FormData();
-    formData.append('file', this.onUploadedImage);
-  }
+  // imageUploadAction() {
+  //   const imageFormData = new FormData();
+  //   formData.append('file', this.onUploadedImage);
+  // }
 }
