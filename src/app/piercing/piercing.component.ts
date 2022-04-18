@@ -2,9 +2,9 @@ import { PiercingService } from './piercing.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-percing',
-  templateUrl: './percing.component.html',
-  styleUrls: ['./percing.component.scss'],
+  selector: 'app-piercing',
+  templateUrl: './piercing.component.html',
+  styleUrls: ['./piercing.component.scss'],
 })
 export class PercingComponent implements OnInit {
   orcamentosPiercing: Array<any>;

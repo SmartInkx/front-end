@@ -5,15 +5,19 @@
 }
 
 body {
-  background-image: linear-gradient(white,rgb(63, 63, 63));
+  background-image: url('../../assets/background-orcamento.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   text-align: center;
+  color: beige;
 }
 
 h2 {
   text-align: center;
+  color: beige;
 }
 
 h3 {
@@ -21,7 +25,7 @@ h3 {
 }
 
 .card-tattoo {
-  background-color: antiquewhite;
+  background-color: lightgray;
   width: 190px;
   height: 300px;
   left: 20%;
@@ -29,7 +33,7 @@ h3 {
 }
 
 .card-piercing {
-  background-color: antiquewhite;
+  background-color: lightgray;
   max-width: 190px;
   height: 300px;
   left: 59%;

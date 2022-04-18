@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PercingComponent } from './percing.component';
+import { PercingComponent } from './piercing.component';
 
 describe('PercingComponent', () => {
   let component: PercingComponent;

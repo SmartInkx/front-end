@@ -46,11 +46,23 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="outros">Local: </label>
+            <input
+              type="text"
+              id="local_escolhido"
+              name="local"
+              class="form-control"
+              placeholder="Digite o local a ser tatuado"
+              [(ngModel)]="orcamento.local_escolhido"
+              required
+            />
+          </div>
           <img src="./.././../assets/tattoo.jpg" />
 
           <div>
             <button mat-raised-button [mat-dialog-close]="true" type="submit">
-              Salvar
+              Enviar
             </button>
             <button mat-raised-button [mat-dialog-close]>Cancelar</button>
           </div>
