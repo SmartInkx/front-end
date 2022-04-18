@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './piercing.component.html',
   styleUrls: ['./piercing.component.scss'],
 })
-export class PercingComponent implements OnInit {
+export class PiercingComponent implements OnInit {
   orcamentosPiercing: Array<any>;
   orcamento: any;
 

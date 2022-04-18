@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
 import { TattooComponent } from './tattoo/tattoo.component';
-import { PercingComponent } from './piercing/piercing.component';
+import { PiercingComponent } from './piercing/piercing.component';
 import { ModalTattoComponent } from './modal-tattoo/modal-tatto.component';
 import { ModalPercingComponent } from './modal-percing/modal-percing.component';
 
@@ -34,7 +34,7 @@ import { ModalPercingComponent } from './modal-percing/modal-percing.component';
     ModalComponent,
     OrcamentoComponent,
     TattooComponent,
-    PercingComponent,
+    PiercingComponent,
     ModalTattoComponent,
     ModalPercingComponent,
   ],
