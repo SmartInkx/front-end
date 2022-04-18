@@ -10,29 +10,20 @@
     />
   </head>
   <body>
-    <nav>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">História</a></li>
-        <li>
-          <a href="#">Tatuadores</a>
-          <ul>
-            <li><a href="#">Galeria de Fotos</a></li>
-            <li><a href="#">Profissionais</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Piercing</a>
-          <ul>
-            <li><a href="#">Galeria de Fotos</a></li>
-            <li><a href="#">Profissionais</a></li>
-          </ul>
-        </li>
-        <li><a routerLink="/orcamento">Orçamentos</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><button mat-raised-button (click)="openDialog()">Cadastrar Usuário</button></li>
-      </ul>
-    </nav>
+    <button mat-button>Home</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above"> </mat-menu>
+
+    <button mat-button>Galeria</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below"> </mat-menu>
+
+    <button mat-button>Profissionais</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before"> </mat-menu>
+
+    <button mat-button><a routerLink="/orcamento">Orçamentos</a></button>
+    <mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
+
+    <button mat-button mat-raised-button (click)="openDialog()">Cadastrar Usuário</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
   </body>
 </html>
 <router-outlet></router-outlet>
