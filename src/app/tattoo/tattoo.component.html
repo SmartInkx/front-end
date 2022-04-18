@@ -8,20 +8,21 @@
   </head>
   <body>
     <form>
-      <input />Nome:
+      <label for="name"> Nome: </label> <input type="text">
       <br>
-      <input />Cel:
+      <label for="cel">Celular: </label> <input type="tel">
       <br>
-      <input />E-mail:
+      <label for="email">E-mail</label> <input type="email">
       <br>
+      <label for="local">Local da Tatuagem: </label><input type="text">
+      <label for="file"></label><input type="file"/>
+      <button class="form-submit-button" type="submit">Enviar</button>
+      <br>
+      <h2>Está em dúvida do nome do local? De uma olhada na imagem abaixo</h2>
       <img
         src="https://www.wefashiontrends.com/wp-content/uploads/2017/01/mapa-dor-tatuagem.jpg"
       />
-      <h1>Escolha um local na imagem ao lado e digite no campo abaixo</h1>
-      <input type="text" placeholder="Digite aqui o local escolhido"/>
-      <input type="file"/>
-      <button type="submit">Salvar</button>
-      <button type="submit">Cancelar</button>
+      <button  type="submit">Cancelar</button>
     </form>
   </body>
 </html>

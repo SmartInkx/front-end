@@ -6,7 +6,7 @@ import { ModalTattoComponent } from '../modal-tattoo/modal-tatto.component';
 @Component({
   selector: 'app-orcamento',
   templateUrl: './orcamento.component.html',
-  styleUrls: ['./orcamento.component.scss']
+  styleUrls: ['./orcamento.component.scss'],
 })
 export class OrcamentoComponent implements OnInit {
 
@@ -29,3 +29,4 @@ export class OrcamentoComponent implements OnInit {
   }
 
 }
+
