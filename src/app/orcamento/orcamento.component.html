@@ -7,31 +7,32 @@
     <title>Orçamento</title>
   </head>
   <body>
-    <!-- <h1>Orçamentos</h1> -->
     <h1>Olá, sejam bem-vindos a nossa página de Orçamentos.</h1>
     <h2>
       Abaixo temos duas modalidades de orçamentos. Se atentem ao escolher qual
       você deseja.
       <p>Os retornos dos orçamentos são respondidos em até 72h horas.</p>
     </h2>
-    <mat-card class="card-tattoo">
-      <img
-        mat-card-lg-image
-        src="https://cdn-icons-png.flaticon.com/512/1685/1685911.png"
-      />
-      <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
-        Tattoo
-      </button>
-    </mat-card>
+    <div class="cards">
+      <mat-card class="card-tattoo">
+        <img class="imagem"
+          mat-card-lg-image
+          src="https://cdn-icons-png.flaticon.com/512/1685/1685911.png"
+        />
+        <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
+          Tattoo
+        </button>
+      </mat-card>
 
-    <mat-card class="card-piercing">
-      <img
-        mat-card-lg-image
-        src="https://cdn-icons-png.flaticon.com/512/3467/3467905.png"
-      />
-      <button class="bt-piercing" mat-raised-button (click)="openDialog()">
-        Piercing
-      </button>
-    </mat-card>
+      <mat-card class="card-piercing">
+        <img class="imagem"
+          mat-card-lg-image
+          src="https://cdn-icons-png.flaticon.com/512/3467/3467905.png"
+        />
+        <button class="bt-piercing" mat-raised-button (click)="openDialog()">
+          Piercing
+        </button>
+      </mat-card>
+    </div>
   </body>
 </html>
