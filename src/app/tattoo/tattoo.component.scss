@@ -1,8 +1,8 @@
-form{
+form {
   margin: auto;
   width: 400px;
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -20,8 +20,8 @@ input {
 }
 
 img {
-  max-width:500px;
-  max-height:360px;
+  max-width: 500px;
+  max-height: 360px;
 }
 
 h2 {
@@ -30,21 +30,12 @@ h2 {
 }
 
 .form-submit-button {
-
   background: gray;
-
   color: white;
-
   border: 0ch;
-
   border-color: black;
-
   height: 40px;
-
   width: 65px;
-
   font: bold 15px Verdana, sans-serif;
-
-  text-shadow:none;
-
-  }
+  text-shadow: none;
+}
