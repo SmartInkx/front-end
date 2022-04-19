@@ -67,7 +67,23 @@
             <button mat-raised-button [mat-dialog-close]>Cancelar</button>
           </div>
         </form>
-        <!-- <input type="file" (change)="uploadImage($event)" /> -->
+        <div class="form-group">
+          <label>Imagem:</label>
+          <input
+            type="file"
+            (change)="selectFile($event)"
+            class="form-control"
+          />
+          <button
+            mat-raised-button
+            [mat-dialog-close]
+            type="submit"
+            (click)="uploadFile()"
+            value="Enviar"
+          >
+            Enviar arquivo
+          </button>
+        </div>
       </div>
     </section>
   </body>

@@ -9,11 +9,10 @@ import { TattooService } from './tattoo.service';
 export class TattooComponent implements OnInit {
   orcamentos: Array<any>;
   orcamento: any;
-  uploadedImage: File;
-  image: any;
+  localUrl: any;
+  file?: File;
 
   constructor(private service: TattooService) {}
-
 
   ngOnInit(): void {
     this.orcamento = {};
@@ -27,12 +26,25 @@ export class TattooComponent implements OnInit {
     });
   }
 
-  // onUploadImage(event) {
-  //   this.uploadedImage = event.target.files[0];
-  // }
+  selectFile(event: any) {
+    this.file = <File>event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+      reader.onload = (event: any) => {
+        this.localUrl = event.target.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  }
 
-  // imageUploadAction() {
-  //   const imageFormData = new FormData();
-  //   formData.append('file', this.onUploadedImage);
-  // }
+  uploadFile() {
+    if (this.file != undefined) {
+      this.service.uploadFile(this.file).subscribe((data) => {
+        console.log(data);
+        alert('Arquivo enviado com sucesso!');
+      });
+    } else {
+      alert('Selecione um arquivo!');
+    }
+  }
 }

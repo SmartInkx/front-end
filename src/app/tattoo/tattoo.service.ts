@@ -14,8 +14,11 @@ export class TattooService {
     return this.http.post(this.loginUrl, orcamento);
   }
 
-  uploadImage (formData: any) {
+  uploadFile(file: File) {
+    const formData: FormData = new FormData();
+    console.log(file.name);
+    console.log(file);
+    formData.append('file', file);
     return this.http.post(this.orcamentoTattooUrl, formData);
   }
 }
-
