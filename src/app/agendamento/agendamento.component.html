@@ -1,0 +1,33 @@
+<header>
+  <mat-toolbar>
+    <span>
+        <p mat-button routerLink="/home">Home</p>
+        <p mat-button routerLink="/agendamento">Agendamento</p>
+        <p mat-button routerLink="/orcamento">Orçamentos</p>
+    </span>
+  </mat-toolbar>
+</header>
+<div class="cards">
+  <mat-card class="card-tattoo">
+    <img
+      class="imagem"
+      mat-card-lg-image
+      src="https://cdn-icons-png.flaticon.com/512/1685/1685911.png"
+    />
+    <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
+      Tattoo
+    </button>
+  </mat-card>
+
+  <mat-card class="card-piercing">
+    <img
+      class="imagem"
+      mat-card-lg-image
+      src="https://cdn-icons-png.flaticon.com/512/3467/3467905.png"
+    />
+    <button class="bt-piercing" mat-raised-button (click)="openDialog()">
+      Piercing
+    </button>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

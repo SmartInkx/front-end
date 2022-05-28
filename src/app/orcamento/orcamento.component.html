@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orçamento</title>
-  </head>
-  <body>
-    <h1>Olá, sejam bem-vindos a nossa página de Orçamentos.</h1>
-    <h2>
-      Abaixo temos duas modalidades de orçamentos. Se atentem ao escolher qual
-      você deseja.
-      <p>Os retornos dos orçamentos são respondidos em até 72h horas.</p>
-    </h2>
-    <div class="cards">
-      <mat-card class="card-tattoo">
-        <img class="imagem"
-          mat-card-lg-image
-          src="https://cdn-icons-png.flaticon.com/512/1685/1685911.png"
-        />
-        <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
-          Tattoo
-        </button>
-      </mat-card>
-
-      <mat-card class="card-piercing">
-        <img class="imagem"
-          mat-card-lg-image
-          src="https://cdn-icons-png.flaticon.com/512/3467/3467905.png"
-        />
-        <button class="bt-piercing" mat-raised-button (click)="openDialog()">
-          Piercing
-        </button>
-      </mat-card>
-    </div>
-  </body>
-</html>
+<header>
+  <mat-toolbar>
+    <span>
+        <p mat-button routerLink="/home">Home</p>
+        <p mat-button>Agendamento</p>
+        <p mat-button routerLink="/orcamento">Orçamentos</p>
+    </span>
+  </mat-toolbar>
+</header>
+<body>
+  <div class="orcamento">
+    <p>Orcamento</p>
+  </div>
+</body>

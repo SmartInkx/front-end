@@ -1,29 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    Aqui chamamos o nosso arquivo css externo
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../engrenagem/engrenagem.component.scss"
-    />
-  </head>
+  <header>
+    <mat-toolbar>
+      <span>
+        <p mat-button routerLink="/home">Home</p>
+        <p mat-button routerLink="/agendamento">Agendamento</p>
+        <p mat-button routerLink="/orcamento">Orçamentos</p>
+      </span>
+      <div class="btn">
+        <button mat-button mat-raised-button (click)="openDialog()">
+          Login
+        </button>
+        <button mat-button mat-raised-button (click)="openDialog()">
+          Cadastre-se
+        </button>
+      </div>
+    </mat-toolbar>
+  </header>
+<section>
+  <h1>O QUE PRECISA SER DEFINIDO PELO GRUPO!!!!</h1>
+</section>
   <body>
-    <button mat-button>Home</button>
-    <mat-menu #aboveMenu="matMenu" yPosition="above"> </mat-menu>
-
-    <button mat-button>Galeria</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below"> </mat-menu>
-
-    <button mat-button>Profissionais</button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before"> </mat-menu>
-
-    <button mat-button><a routerLink="/orcamento">Orçamentos</a></button>
-    <mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
-
-    <button mat-button mat-raised-button (click)="openDialog()">Cadastrar Usuário</button>
-    <mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide
+        ><img src="../../assets/beneficios.jpg" alt=""
+      /></ng-template>
+      <ng-template carouselSlide
+        ><img src="../../assets/beneficios.jpg" alt=""
+      /></ng-template>
+      <ng-template carouselSlide
+        ><img src="../../assets/beneficios.jpg" alt=""
+      /></ng-template>
+    </owl-carousel-o>
   </body>
-</html>
 <router-outlet></router-outlet>

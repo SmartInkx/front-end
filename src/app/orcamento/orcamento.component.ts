@@ -14,18 +14,5 @@ export class OrcamentoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  abreDialog() {
-    const dialogRef = this.dialog.open(ModalTattoComponent);
-
-    dialogRef.afterClosed()
-  }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(ModalPercingComponent);
-
-    dialogRef.afterClosed()
-  }
-
 }
 

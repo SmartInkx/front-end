@@ -1,44 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
+mat-toolbar {
+  background-color: #a0a0a0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body {
-  font-family: arial, helvetica, sans-serif;
-  font-size: 40px;
-  background-image: url("https://www.tattooyes.com.br/wp-content/uploads/2018/11/tattoo-machine-Wallpaper-Desktop-number-jZf-1150x767.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+span {
+  // padding: 570px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  // font-family: "Marvel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #ffffff;
 }
 
-.matMenu {
-  font-size: large;
+p {
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.mat-button {
-  box-shadow: 0px 0px 0px 2px #dcdee3;
-	background:linear-gradient(to bottom,#f8f8f8 5%, #dae0e6 100%);
-	// background-color:#000000;
-	border-radius:10px;
-	// border:1px solid #030305;
-	display:inline-block;
-	cursor:pointer;
-	color:#0c0c0c;
-	font-family:Arial;
-	font-size:19px;
-	padding:12px 37px;
-	text-decoration:none;
-	// text-shadow:0px 1px 0px #2e3036;
-  margin: 0 40px;
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 7px;
+  margin-right: 5px;
 }
 
-.mat-button:hover {
-  background:linear-gradient(to bottom, #dae0e6 5%, #000000 100%);
-	background-color:#dae0e6;
+section{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 50%;
 }
 
-.mat-button:active {
-  position:relative;
-	top:1px;
+h1 {
+  background-color: #a0a0a0;
+  width: 45%;
+  height: 15%;
+  border-radius: 10px;
+  margin-top: 60px;
+  align-content: center;
+  display: inline;
+  justify-content: center;
 }
-
