@@ -18,28 +18,28 @@ export class EngrenagemComponent implements OnInit {
     dialogRef.afterClosed();
   }
 
-  customOptions: any = {
+  banneSlider: any = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
     dots: true,
-    navSpeed: 700,
-    navText: ['', ''],
+    navSpeed: 100,
+    navText: [''],
     responsive: {
       0: {
         items: 1
       },
-      400: {
-        items: 2
+      350: {
+        items: 1
       },
-      740: {
-        items: 3
+      540: {
+        items: 1
       },
       940: {
-        items: 4
+        items: 1
       }
     },
-    nav: true
+    nav: false
   }
 }
