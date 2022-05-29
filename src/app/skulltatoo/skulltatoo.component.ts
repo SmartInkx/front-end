@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
@@ -9,7 +10,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   styleUrls: ['./skulltatoo.component.scss'],
 })
 export class SkullTatooComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    public route: Router
+    ) {}
 
   ngOnInit(): void {}
 
@@ -17,6 +21,11 @@ export class SkullTatooComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalComponent);
     dialogRef.afterClosed();
   }
+// Verificar rota de navagção para o botão de login.
+  // public navigate() {
+  //   this.navigate['/home']
+  // }
+
 
   banneSlider: any = {
     loop: true,
