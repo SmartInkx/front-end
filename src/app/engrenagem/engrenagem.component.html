@@ -1,9 +1,9 @@
 <header>
   <mat-toolbar>
     <span>
-      <p mat-button routerLink="/home">Home</p>
-      <p mat-button routerLink="/agendamento">Agendamento</p>
-      <p mat-button routerLink="/orcamento">Orçamentos</p>
+      <p class="navBar" mat-button routerLink="/home">Home</p>
+      <p class="navBar" mat-button routerLink="/agendamento">Agendamento</p>
+      <p class="navBar" mat-button routerLink="/orcamento">Orçamentos</p>
     </span>
     <div class="btn">
       <button mat-button mat-raised-button (click)="openDialog()">Login</button>
@@ -13,40 +13,65 @@
     </div>
   </mat-toolbar>
 </header>
-<body class="container">
-  <section>
+<body>
+  <div class="container">
     <div class="item">
-      <h1>VERIFICAR</h1>
+      <img src="../../assets/estudio.jpeg" alt="">
     </div>
-  </section>
-  <div class="banner">
-    <owl-carousel-o [options]="banneSlider">
-      <ng-template carouselSlide>
-        <img src="../../assets/abelha.jpeg" alt="imagem1 - mudar -">
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="../../assets/groot.jpeg" alt="imagem2 - mudar -">
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="../../assets/luas.jpeg" alt="imagem3 - mudar -">
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="../../assets/judy.jpeg" alt="imagem4 - mudar -">
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="../../assets/Madara.jpeg" alt="imagem4 - mudar -">
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="../../assets/marcelina.jpeg" alt="imagem4 - mudar -">
-      </ng-template>
-    </owl-carousel-o>
-  </div>
-  <section>
+    <div class="banner">
+      <owl-carousel-o [options]="banneSlider">
+        <ng-template carouselSlide>
+          <img src="../../assets/abelha.jpeg" alt="imagem1 - mudar -" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="../../assets/groot.jpeg" alt="imagem2 - mudar -" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="../../assets/luas.jpeg" alt="imagem3 - mudar -" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="../../assets/judy.jpeg" alt="imagem4 - mudar -" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="../../assets/Madara.jpeg" alt="imagem4 - mudar -" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="../../assets/marcelina.jpeg" alt="imagem4 - mudar -" />
+        </ng-template>
+      </owl-carousel-o>
+    </div>
     <div class="profissionais">
-      <h1>Profissionais </h1>
+      <p>Profissionais</p>
     </div>
-  </section>
-  <mat-card>
-  </mat-card>
+    <div class="cards">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Kitsune</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../assets/kit.jpeg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Wolfox</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../assets/wolf.jpeg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p>FALTA</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <h1>FALTA</h1>
+  </div>
 </body>
 <router-outlet></router-outlet>
