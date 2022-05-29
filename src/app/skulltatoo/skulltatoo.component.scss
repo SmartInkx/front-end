@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #7c7c7c;
+  border-radius: 5rem;
+}
+
 mat-toolbar {
   background-color: #7c7c7c;
   display: flex;
@@ -11,7 +31,9 @@ mat-toolbar {
 span {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 50px;
+  margin-left: 700px;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -24,7 +46,7 @@ span {
   font-family: "Montserrat", sans-serif;
 }
 
-button {
+button{
   color: #181818;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -33,19 +55,22 @@ button {
 .btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 10px;
   border-radius: 7px;
   margin-right: 5px;
   font-family: "Montserrat", sans-serif;
-}
 
+}
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(#181818, #a0a0a0, #ffffff);
+
+  // img {
+  //   width: 50%;
+  // }
 }
 
 .title {

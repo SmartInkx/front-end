@@ -1,38 +1,45 @@
-<header>
-  <mat-toolbar>
-    <span>
-      <p class="navBar" mat-button routerLink="/home">Home</p>
-      <p class="navBar" mat-button routerLink="/agendamento">Agendamento</p>
-    </span>
-  </mat-toolbar>
-</header>
-<body>
-  <div class="container">
-    <div class="title">
-      <h1>PARA REALIZAR O SEU AGENDAMENTO, SELECIONE UMA DAS ALTERNATIVAS ABAIXO: </h1>
+<html>
+  <header>
+    <mat-toolbar>
+      <span>
+        <p class="navBar" mat-button routerLink="/home">Home</p>
+        <p class="navBar" mat-button routerLink="/agendamento">Agendamento</p>
+      </span>
+    </mat-toolbar>
+  </header>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>
+          PARA REALIZAR O SEU AGENDAMENTO, SELECIONE UMA DAS ALTERNATIVAS
+          ABAIXO:
+        </h1>
+      </div>
+      <div class="cards">
+        <mat-card class="card-tattoo">
+          <img
+            class="imagem"
+            mat-card-lg-image
+            src="../../assets/tatto-home.png"
+            alt="Botão para selecionar o agendamento para tattuagens"
+          />
+          <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
+            Tattoo
+          </button>
+        </mat-card>
+        <mat-card class="card-piercing">
+          <img
+            class="imagem"
+            mat-card-lg-image
+            src="../../assets/lips-piercing.png"
+            alt="Botão para selecionar o agendamento para piercings"
+          />
+          <button class="bt-piercing" mat-raised-button (click)="openDialog()">
+            Piercing
+          </button>
+        </mat-card>
+      </div>
     </div>
-    <div class="cards">
-      <mat-card class="card-tattoo">
-        <img
-          class="imagem"
-          mat-card-lg-image
-          src="../../assets/tatto-home.png" alt="Botão para selecionar o agendamento para tattuagens"
-        />
-        <button class="bt-tattoo" mat-raised-button (click)="abreDialog()">
-          Tattoo
-        </button>
-      </mat-card>
-      <mat-card class="card-piercing">
-        <img
-          class="imagem"
-          mat-card-lg-image
-          src="../../assets/lips-piercing.png" alt="Botão para selecionar o agendamento para piercings"
-        />
-        <button class="bt-piercing" mat-raised-button (click)="openDialog()">
-          Piercing
-        </button>
-      </mat-card>
-    </div>
-  </div>
-</body>
+  </body>
+</html>
 <router-outlet></router-outlet>

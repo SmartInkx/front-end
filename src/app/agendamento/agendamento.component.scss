@@ -1,14 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #7c7c7c;
+  border-radius: 5rem;
+}
+
 mat-toolbar {
   background-color: #7c7c7c;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  // align-items: center;
 }
 
 span {
+  margin-left: 700px;
   display: flex;
   flex-direction: row;
   gap: 50px;
