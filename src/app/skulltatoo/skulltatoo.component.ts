@@ -5,10 +5,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-engrenagem',
-  templateUrl: './engrenagem.component.html',
-  styleUrls: ['./engrenagem.component.scss'],
+  templateUrl: './skulltatoo.component.html',
+  styleUrls: ['./skulltatoo.component.scss'],
 })
-export class EngrenagemComponent implements OnInit {
+export class SkullTatooComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}

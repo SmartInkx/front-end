@@ -12,9 +12,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ContatoComponent } from './contato/contato.component';
-import { EngrenagemComponent } from './engrenagem/engrenagem.component';
+import { SkullTatooComponent } from './skulltatoo/skulltatoo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EngrenagemService } from './engrenagem/engrenagem.service';
+import { EngrenagemService } from './skulltatoo/skulltatoo.service';
 import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
@@ -34,7 +34,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeComponent,
     ClientesComponent,
     ContatoComponent,
-    EngrenagemComponent,
+    SkullTatooComponent,
     LoginComponent,
     ModalComponent,
     OrcamentoComponent,

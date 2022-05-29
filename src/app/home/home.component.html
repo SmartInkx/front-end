@@ -1,100 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-  </head>
   <body>
-    <header>
-      <div class="caixa">
-        <h1><img class="img-logo" src="./..//../assets/logo.png" /></h1>
-        <nav>
-          <ul>
-						<li><a routerLink="/">Home</a></li>
-						<li><a routerLink="/clientes">Clientes</a></li>
-						<li><a routerLink="/contato">Contato</a></li>
-					</ul>
-        </nav>
-      </div>
+    <header class="header">
+        <img src="images/logo_smartink.png" alt="" />
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#ourteam">Equipe</a>
+        <a href="#ourcustomers">Clientes</a>
+        <a href="#contact">Contatos</a>
+      </nav>
     </header>
+    <section class="home" id="home">
+      <div class="content">
+        <h3>SmartInk</h3>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h1 class="heading"><span>Sobre</span> a SmartInk</h1>
 
-    <img class="banner" src="./..//../assets/banner.jpg" />
-
-    <main>
-      <section class="principal">
-        <h2 class="titulo-principal">Sobre a SmartInk</h2>
-
-        <img
-          class="utensilios"
-          src="./..//../assets/utensilios.jpg"
-          alt="Utensilios de um barbeiro."
-        />
-
-        <p>
-          O projeto SmartInk foi pensado por alunos do
-          curso Análise e Desenvolvimento de Sistemas para o
-          projeto de TCC. A ideia é que Tatuadores e BodyPiercings tenham
-          um sistema onde possam controlar o fluxo de clientes, de serviços
-          realizados e gastos do estúdio. Nosso sistema visa otimização e
-          automação na vida desses profissionais!
-        </p>
-
-        <p id="missao">
-          <em
-            >Nossa missão é:
-            <strong
-              >"ESCREVER UM SOBRE O PROJETO ESCREVER UM SOBRE O PROJETO ESCREVER
-              UM SOBRE O PROJETO "</strong
-            >.</em
-          >
-        </p>
-
-        <p>
-          ESCREVER UM SOBRE O PROJETO ESCREVER UM SOBRE O PROJETO ESCREVER UM
-          SOBRE O PROJETO ESCREVER UM SOBRE O PROJETO ESCREVER UM SOBRE O
-          PROJETO ESCREVER UM SOBRE O PROJETO ESCREVER UM SOBRE O PROJETO.
-        </p>
-      </section>
-
-      <section class="mapa">
-        <h3 class="titulo-principal">Nosso estabelecimento</h3>
-        <p>Nosso estabelecimento está localizado no coração da cidade.</p>
-
-        <div class="mapa-conteudo">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1493.597895229014!2d-46.683408350819434!3d-23.58684629427121!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574310080af1%3A0x18591c99b6da9c29!2sP%C3%A1tio%20Victor%20Malzoni%20-%20Av.%20Brg.%20Faria%20Lima%2C%203477%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004538-132!5e0!3m2!1spt-BR!2sbr!4v1647385898930!5m2!1spt-BR!2sbr"
-            width="100%"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
+      <div class="row">
+        <div class="image">
+          <img src="../../assets/Logo_TCC.png" alt="" />
         </div>
-      </section>
 
-      <section class="beneficios">
-        <h3 class="titulo-principal">Benefícios</h3>
-
-        <div class="conteudo-beneficios">
-          <ul class="lista-beneficios">
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-            <li class="itens">ESCREVER SOBRE OS BENEFÍCIOS</li>
-          </ul>
-          <img src="./..//../assets/beneficios.jpg" class="imagem-beneficios" />
+        <div class="content">
+          <h3>o Que e Quem é a SmartInk?</h3>
+          <p>
+            O projeto SmartInk foi pensado por alunos do curso Análise e
+            Desenvolvimento de Sistemas para o projeto de TCC.
+          </p>
+          <p>
+            A ideia é que Tatuadores e BodyPiercings tenham um sistema onde
+            possam controlar o fluxo de clientes e seus agendamentos.
+          </p>
+          <p>
+            Nosso sistema visa otimização e automação na vida desses
+            profissionais!
+          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+    <section class="menu" id="ourteam">
+      <h1 class="heading"><span>Nosso Time</span></h1>
 
-    <footer>
-      <img src="./..//../assets/logo-branco.png" />
-      <p class="copyright">&copy; Copyright SmartInk - 2022</p>
-    </footer>
+      <div class="box-container">
+        <div class="box">
+          <img src="../../assets/Davi.jpeg" alt="" />
+          <h3>Davi Soares</h3>
+          <br />
+          <div class="price">FrontEnd<span></span></div>
+        </div>
+
+        <div class="box">
+          <img src="../../assets/Tauane.jpeg" alt="" />
+          <h3>Tauane Lima</h3>
+          <br />
+          <div class="price">FrontEnd <span></span></div>
+        </div>
+
+        <div class="box">
+          <img src="../../assets/rodrigo.jpeg" alt="" />
+          <h3>Rodrigo Pereira</h3>
+          <br />
+          <div class="price">BackEnd <span></span></div>
+        </div>
+
+        <div class="box">
+          <img src="../../assets/renan.jpeg" alt="" />
+          <br />
+          <h3>Renan Santana</h3>
+          <div class="price">BackEnd <span></span></div>
+        </div>
+
+        <div class="box">
+          <img src="../../assets/Bruno.jpeg" alt="" />
+          <h3>Bruno Shimamoto</h3>
+          <br />
+          <div class="price">Documentação<span></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="products" id="ourcustomers">
+      <h1 class="heading">Nossos <span>Clientes</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="../../assets/theblack.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <div class="price">The BlackMoons<span></span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="../../assets/wolfox.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <div class="price"><a routerLink="/skulltattoo">Skull Tattoo</a><span></span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="../../assets/caneta.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <!-- <h3>Caneta Tattoo</h3> -->
+            <div class="price">Caneta Tattoo <span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>Fale</span> Conosco</h1>
+
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1493.597895229014!2d-46.683408350819434!3d-23.58684629427121!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574310080af1%3A0x18591c99b6da9c29!2sP%C3%A1tio%20Victor%20Malzoni%20-%20Av.%20Brg.%20Faria%20Lima%2C%203477%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004538-132!5e0!3m2!1spt-BR!2sbr!4v1647385898930!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+
+        <form action="">
+          <h3>
+            Entre em Contato para saber mais informações sobre o nosso Software
+          </h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="Nome" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="number" placeholder="Número" />
+          </div>
+          <input type="submit" value="Enviar" class="btn" />
+        </form>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="credit"><span>SmartInk</span> | all rights reserved</div>
+    </section>
   </body>
 </html>
-<router-outlet></router-outlet>

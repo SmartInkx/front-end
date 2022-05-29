@@ -1,4 +1,4 @@
-import { EngrenagemComponent } from './engrenagem.component';
+import { SkullTatooComponent } from './skulltatoo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,4 +8,4 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   declarations: [],
   imports: [CommonModule, MatDialogModule, CarouselModule ],
 })
-export class EngrenagemModule {}
+export class SkullTatooModule {}
