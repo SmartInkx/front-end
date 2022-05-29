@@ -1,18 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 mat-toolbar {
-  background-color: #a0a0a0;
+  background-color: #7c7c7c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: space-between;
   align-items: center;
 }
 
 span {
-  padding: 570px;
   display: flex;
   flex-direction: row;
   gap: 50px;
-  // font-family: "Marvel";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -20,7 +19,62 @@ span {
   color: #ffffff;
 }
 
-p {
+.navBar {
   cursor: pointer;
-  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background: linear-gradient(#181818, #ffffff);
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+h1 {
+  width: 50%;
+  margin-top: 100px;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
+
+.cards {
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 28px;
+}
+
+.card-tattoo {
+  margin-top: 150px;
+  width: 20%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.card-piercing {
+  margin-top: 150px;
+  width: 20%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

@@ -33,25 +33,12 @@ span {
   margin-right: 5px;
 }
 
-.init {
-  display: flex;
-  flex-direction: row;
-  background: linear-gradient(#888888, #fefefe);
-}
-
-.init1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: flex-end;
-  align-content: flex-end;
-}
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#888888, #fefefe);
+  background: linear-gradient(#181818, #ffffff);
 }
 
 .item {

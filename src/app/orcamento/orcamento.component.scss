@@ -1,18 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 mat-toolbar {
-  background-color: #a0a0a0;
+  background-color: #7c7c7c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: space-between;
   align-items: center;
 }
 
 span {
-  padding: 650px;
   display: flex;
   flex-direction: row;
   gap: 50px;
-  // font-family: "Marvel";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -20,30 +19,7 @@ span {
   color: #ffffff;
 }
 
-p {
+.navBar {
   cursor: pointer;
-  text-decoration: none;
-}
-
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.orcamento {
-  background-color: #a0a0a0;
-  width: 40%;
-  height: 15%;
-  border-radius: 10px;
-  margin-top: 60px;
-
-  p {
-    margin-top: 108px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 47px;
-    line-height: 39px;
-    color: #ffffff;
-  }
+  font-family: "Montserrat", sans-serif;
 }
