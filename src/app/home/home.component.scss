@@ -72,7 +72,8 @@ section {
   background: #010103;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  align-content: center;
+  justify-content: center;
   padding: 1.5rem 7%;
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
   position: fixed;
@@ -239,9 +240,8 @@ section {
   flex-wrap: wrap;
 }
 
-.about .row .image {
+img .about .row .image {
   flex: 1 1 45rem;
-  background-color: #010103;
 }
 
 .about .row .image img {
