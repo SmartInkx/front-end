@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class LoginService {
-  loginUrl = 'https://smartink.herokuapp.com/usuarios/cadastrar';
+  loginUrl = 'api/cadastrar';
 
   constructor(private http: HttpClient) {}
 
