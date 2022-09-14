@@ -17,16 +17,11 @@ export class SkullTatooComponent implements OnInit {
 
   ngOnInit(): void {}
 
+
   openDialog() {
     const dialogRef = this.dialog.open(ModalComponent);
     dialogRef.afterClosed();
   }
-// Verificar rota de navagção para o botão de login.
-  // public navigate() {
-  //   this.navigate['/home']
-  // }
-
-
   banneSlider: any = {
     loop: true,
     mouseDrag: true,

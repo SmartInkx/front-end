@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { TattooService } from './tattoo.service';
 
@@ -12,39 +14,23 @@ export class TattooComponent implements OnInit {
   localUrl: any;
   file?: File;
 
-  constructor(private service: TattooService) {}
+  constructor(
+    private service: TattooService,
+    public route: Router
+    ) {}
 
   ngOnInit(): void {
     this.orcamento = {};
   }
 
-  orcamentoTattoo(ott) {
+  public cadastroSuccess(): void {
+    this.route.navigate
+  }
+  public orcamentoTattoo(ott):void {
     this.service.orcamentoTattoo(this.orcamento).subscribe((resposta) => {
       this.orcamentos.push(resposta);
 
       ott.reset();
     });
-  }
-
-  selectFile(event: any) {
-    this.file = <File>event.target.files[0];
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-      reader.onload = (event: any) => {
-        this.localUrl = event.target.result;
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    }
-  }
-
-  uploadFile() {
-    if (this.file != undefined) {
-      this.service.uploadFile(this.file).subscribe((data) => {
-        console.log(data);
-        alert('Arquivo enviado com sucesso!');
-      });
-    } else {
-      alert('Selecione um arquivo!');
-    }
   }
 }
