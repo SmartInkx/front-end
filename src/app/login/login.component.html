@@ -2,7 +2,7 @@
   <div class="image">
     <img src="./.././../assets/tattoo-login.jpg"/>
   </div>
-  <div class="login-info">
+  <form class="login-info" [formGroup]="form">
     <div class="login">
       <label for="email">E-mail:
         <input
@@ -11,6 +11,7 @@
           name="email"
           class="form-control"
           placeholder="Digite seu e-mail"
+          formControlName="email"
           required
         />
     </label>
@@ -21,11 +22,12 @@
           name="senha"
           class="form-control"
           placeholder="Digite sua senha"
+          formControlName="senha"
           required
         />
     </label>
-    <button mat-raised-button>LOGIN</button>
+    <button mat-raised-button [disabled]="!form.valid">LOGIN</button>
     </div>
-  </div>
+  </form>
 </div>
 
