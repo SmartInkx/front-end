@@ -1,9 +1,50 @@
-.form-control {
-  font-size: larger;
-  width: 100%;
-  margin-bottom: 5%;
-}
+.container {
+  width: 99vw;
+  height: 99vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: dbdad7;
+  gap: 18%;
 
-.btn .button .mat-raised-button{
-  background-color: aquamarine;
+  .image img {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .login-info{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eae0c8;
+    border-radius: 8px;
+    background-color: #eae0c8;
+    display: flex;
+    flex-direction: column;
+    padding: 34%;
+
+    label {
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+  }
+
+  .form-control {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  button {
+    width: 40%;
+    height: 40px;
+  }
 }

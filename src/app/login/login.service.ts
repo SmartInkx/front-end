@@ -5,11 +5,4 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class LoginService {
-  loginUrl = 'api/cadastrar';
-
-  constructor(private http: HttpClient) {}
-
-  criar(contato: any) {
-    return this.http.post(this.loginUrl, contato);
-  }
 }
