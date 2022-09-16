@@ -1,3 +1,5 @@
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,6 +30,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AgendamentoComponent } from './agendamento/agendamento.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthService } from './login/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +47,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ModalTattoComponent,
     ModalPercingComponent,
     AgendamentoComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,10 +64,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatToolbarModule,
     RouterModule,
     CarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule
 
   ],
-  providers: [EngrenagemService],
+  providers: [EngrenagemService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

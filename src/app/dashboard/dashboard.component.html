@@ -1,0 +1,20 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">
+    <p>
+      <mat-icon>home</mat-icon>Home
+    </p>
+    <p>
+      <mat-icon>contacts</mat-icon>Agendamentos
+    </p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <mat-icon (click)="opened=!opened">
+        menu
+      </mat-icon>
+      <p>Dashboard</p>
+    </mat-toolbar>
+    <h1>WORK IN DEVELOPMENT</h1>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

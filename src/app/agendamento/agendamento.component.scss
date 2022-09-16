@@ -23,14 +23,10 @@ html::-webkit-scrollbar-thumb {
 
 mat-toolbar {
   background-color: #7c7c7c;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
 }
 
 span {
-  margin-left: 700px;
+  margin-left: 5px;
   display: flex;
   flex-direction: row;
   gap: 50px;

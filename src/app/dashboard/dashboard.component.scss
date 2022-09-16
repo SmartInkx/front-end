@@ -1,0 +1,21 @@
+mat-sidenav-container {
+  height: 100%;
+}
+
+// mat-sidenav, mat-sidenav-content {
+//   // padding: 5%;
+// }
+
+mat-sidenav {
+  background-color: gray;
+  width: 180px;
+}
+mat-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+p{
+  margin-left: 4px;
+  margin-top: 9px;
+}

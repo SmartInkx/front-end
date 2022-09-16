@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
 import { SkullTatooComponent } from './skulltatoo/skulltatoo.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'skulltattoo', component: SkullTatooComponent },
   { path: 'orcamento', component: OrcamentoComponent},
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
