@@ -1,20 +1,131 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)]="opened">
-    <p>
-      <mat-icon>home</mat-icon>Home
-    </p>
-    <p>
-      <mat-icon>contacts</mat-icon>Agendamentos
-    </p>
+    <p><mat-icon>home</mat-icon>Home</p>
+    <p><mat-icon>contacts</mat-icon>Agendamentos</p>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
-      <mat-icon (click)="opened=!opened">
-        menu
-      </mat-icon>
-      <p>Dashboard</p>
+      <mat-icon (click)="opened = !opened"> menu </mat-icon>
+      <div class="bt">
+        <button class="button" mat-raised-button (click)="abreDialog()">
+          Tattoo
+        </button>
+        <button class="button" mat-raised-button (click)="openDialog()">
+          Piercing
+        </button>
+      </div>
     </mat-toolbar>
-    <h1>WORK IN DEVELOPMENT</h1>
+    <h1>Agendamentos Pendentes</h1>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            1. Davi Soares
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-stepper orientation="horizontal">
+          <mat-step>
+            <ng-template matStepLabel>Confirme as informações</ng-template>
+            <ng-template matStepContent>
+              <mat-form-field class="form-field">
+                <mat-label>Nome</mat-label>
+                <input matInput readonly="true"> Davi
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Celular</mat-label>
+                <input matInput readonly="true"> (11) 98521-4562
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>E-mail</mat-label>
+                <input matInput readonly="true"> davi@faculdadeimpacta.com
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Serviço</mat-label>
+                <input matInput readonly="true"> Piercing
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Local</mat-label>
+                <input matInput readonly="true"> Tragus
+              </mat-form-field>
+              <button mat-button >Editar</button>
+              <button mat-button matStepperNext>Próximo</button>
+            </ng-template>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Selecione data e hora</ng-template>
+            <ng-template matStepContent>
+              <mat-form-field class="form-field">
+                <mat-label>Escolha uma data</mat-label>
+                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Escolha um hórario</mat-label>
+                <input matInput type="time">
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Voltar</button>
+              <button mat-button>Enviar</button>
+            </ng-template>
+          </mat-step>
+        </mat-stepper>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            1. Jane Doe
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-stepper orientation="horizontal">
+          <mat-step>
+            <ng-template matStepLabel>Confirme as informações</ng-template>
+            <ng-template matStepContent>
+              <mat-form-field class="form-field">
+                <mat-label>Nome</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Celular</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>E-mail</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Tipo</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Local</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <button mat-button matStepperNext>Próximo</button>
+            </ng-template>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Selecione data e hora</ng-template>
+            <ng-template matStepContent>
+              <mat-form-field class="form-field">
+                <mat-label>Escolha uma data</mat-label>
+                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Escolha um hórario</mat-label>
+                <input matInput type="time">
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Voltar</button>
+              <button mat-button matStepperNext>Enviar</button>
+            </ng-template>
+          </mat-step>
+        </mat-stepper>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

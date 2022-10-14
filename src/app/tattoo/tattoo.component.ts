@@ -19,18 +19,11 @@ export class TattooComponent implements OnInit {
     public route: Router,
     public dialog: MatDialog,
     private dateAdapter: DateAdapter<Date>
-    ) {
-      this.dateAdapter.setLocale('br');
-    }
+    ) { }
 
   ngOnInit(): void {
     this.orcamento = {};
   }
-
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    return day !== 0 && day !== 7;
-  };
 
   abreDialog() {
     const dialogRef = this.dialog.open(ModalComponent, {

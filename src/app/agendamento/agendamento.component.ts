@@ -1,6 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
-import { ModalComponent } from '../modal/modal.component';
 import { ModalTattoComponent } from '../modal-tattoo/modal-tatto.component';
 import { ModalPercingComponent } from '../modal-percing/modal-percing.component';
 
@@ -25,7 +24,6 @@ export class AgendamentoComponent implements OnInit {
     });
     dialogRef.afterClosed()
   }
-
   openDialog() {
     const dialogRef = this.dialog.open(ModalPercingComponent);
     dialogRef.afterClosed()

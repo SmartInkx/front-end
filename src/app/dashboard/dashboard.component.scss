@@ -11,7 +11,33 @@ mat-icon {
   flex-direction: column;
 }
 
-p{
-  margin-left: 4px;
-  margin-top: 9px;
+mat-toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  padding: 15px;
+  display: flex;
+  justify-content: center
+}
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+
+.mat-accordion{
+  display: grid;
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+.bt {
+  display: flex;
+  gap: 10px;
 }

@@ -24,20 +24,6 @@
           <mat-label>Local</mat-label>
           <input matInput>
         </mat-form-field>
-        <div class="form-group">
-          <div class="datetime">
-            <mat-form-field>
-              <mat-label>Escolha uma data</mat-label>
-              <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label>Escolha um hórario</mat-label>
-              <input matInput type="time">
-            </mat-form-field>
-          </div>
-        </div>
         <div>
           <button mat-raised-button [mat-dialog-close]="true" (click)="abreDialog()">
             Enviar
