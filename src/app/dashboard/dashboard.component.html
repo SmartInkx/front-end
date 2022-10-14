@@ -37,16 +37,16 @@
                 <input matInput readonly="true"> (11) 98521-4562
               </mat-form-field>
               <mat-form-field class="form-field">
-                <mat-label>E-mail</mat-label>
-                <input matInput readonly="true"> davi@faculdadeimpacta.com
-              </mat-form-field>
-              <mat-form-field class="form-field">
                 <mat-label>Serviço</mat-label>
                 <input matInput readonly="true"> Piercing
               </mat-form-field>
               <mat-form-field class="form-field">
                 <mat-label>Local</mat-label>
                 <input matInput readonly="true"> Tragus
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Profissional</mat-label>
+                <input matInput> Kit
               </mat-form-field>
               <button mat-button >Editar</button>
               <button mat-button matStepperNext>Próximo</button>
@@ -57,12 +57,12 @@
             <ng-template matStepContent>
               <mat-form-field class="form-field">
                 <mat-label>Escolha uma data</mat-label>
-                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">13/10/2022
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
               <mat-form-field class="form-field">
-                <mat-label>Escolha um hórario</mat-label>
+                <mat-label>Escolha um hórario</mat-label>19:20
                 <input matInput type="time">
               </mat-form-field>
               <button mat-button matStepperPrevious>Voltar</button>
@@ -93,15 +93,15 @@
                 <input matInput>
               </mat-form-field>
               <mat-form-field class="form-field">
-                <mat-label>E-mail</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field class="form-field">
                 <mat-label>Tipo</mat-label>
                 <input matInput>
               </mat-form-field>
               <mat-form-field class="form-field">
                 <mat-label>Local</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Profissional</mat-label>
                 <input matInput>
               </mat-form-field>
               <button mat-button matStepperNext>Próximo</button>
