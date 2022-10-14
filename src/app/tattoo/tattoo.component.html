@@ -3,62 +3,43 @@
       <div class="container">
         <form method="post" #ott="ngForm" (ngSubmit)="orcamentoTattoo(ott)">
           <div class="form-group">
-            <label for="name">Nome: </label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              class="form-control"
-              placeholder="Digite seu nome"
-              [(ngModel)]="orcamento.nome"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="cel">Cel: </label>
-            <input
-              id="numero"
-              name="numero"
-              class="form-control"
-              placeholder="Digite seu numero"
-              [(ngModel)]="orcamento.celular"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail: </label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Digite seu e-mail"
-              [(ngModel)]="orcamento.email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="outros">Local: </label>
-            <input
-              type="text"
-              id="local_escolhido"
-              name="local"
-              class="form-control"
-              placeholder="Digite o local a ser tatuado"
-              [(ngModel)]="orcamento.local_escolhido"
-              required
-            />
-          </div>
-          <p>Em dúvida do nome do lugar? De uma olhada na imagem abaixo:</p>
+            <h1>Preencha todos os campos</h1>
+            <mat-form-field class="form-field">
+              <mat-label>Nome</mat-label>
+              <input matInput>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+              <mat-label>Celular</mat-label>
+              <input matInput>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+              <mat-label>E-mail</mat-label>
+              <input matInput>
+            </mat-form-field>
+        </div>
+          <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
           <img src="./.././../assets/tattoo.jpg" />
+
+          <mat-form-field class="form-field">
+            <mat-label>Local</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <div class="form-group">
+              <mat-form-field>
+                <mat-label>Escolha uma data</mat-label>
+                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+          </div>
+          <div class="form-group">
+            <h3>*Seu agendamento será enviado para a análise e dentro de 72H um membro de nossa equipe entrará em contato.</h3>
+          </div>
           <div>
-            <button mat-raised-button [mat-dialog-close]="true" type="submit">
+            <button mat-raised-button [mat-dialog-close]="true" (click)="abreDialog()">
               Enviar
             </button>
             <button mat-raised-button [mat-dialog-close]>Cancelar</button>
-          </div>
-          <div class="form-group">
-            <p>*Seu agendamento será enviado para a análise e dentro de 72H um membro de nossa equipe entrará em contato.</p>
           </div>
         </form>
       </div>

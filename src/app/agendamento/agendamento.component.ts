@@ -19,16 +19,15 @@ export class AgendamentoComponent implements OnInit {
   }
 
   abreDialog() {
-    const dialogRef = this.dialog.open(ModalTattoComponent);
-
+    const dialogRef = this.dialog.open(ModalTattoComponent, {
+      maxWidth: '100vw',
+      maxHeight: '85vh',
+    });
     dialogRef.afterClosed()
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(ModalPercingComponent);
-
     dialogRef.afterClosed()
   }
-
-
 }

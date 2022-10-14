@@ -1,9 +1,13 @@
 form {
-  margin: auto;
-  width: 400px;
+  width: 500px;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -16,30 +20,17 @@ input {
   width: 300px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #999;
 }
 
 img {
-  max-width: 500px;
-  max-height: 360px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-h2 {
-  font-size: medium;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.form-submit-button {
-  background: gray;
-  color: white;
-  border: 0ch;
-  border-color: black;
-  height: 40px;
-  width: 65px;
-  font: bold 15px Verdana, sans-serif;
-  text-shadow: none;
-}
-
-p {
-  margin-top: 5px;
+.mat-dialog-container {
+  display: block;
+  padding: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
 }

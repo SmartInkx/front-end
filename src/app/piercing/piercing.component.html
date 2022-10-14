@@ -1,75 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orçamento - Piercing</title>
-  </head>
-  <body></body>
-</html>
-<section class="main">
-  <div class="container">
-    <form method="post" #otp="ngForm" (ngSubmit)="orcamentoPiercing(otp)">
-      <div class="form-group">
-        <label for="name">Nome: </label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          class="form-control"
-          placeholder="Digite seu nome"
-          [(ngModel)]="orcamento.nome"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="name">Cel: </label>
-        <input
-          type="tel"
-          id="numero"
-          name="numero"
-          class="form-control"
-          placeholder="Digite seu numero"
-          [(ngModel)]="orcamento.celular"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="name">E-mail: </label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          class="form-control"
-          placeholder="Digite seu e-mail"
-          [(ngModel)]="orcamento.email"
-          required
-        />
+<body>
+  <section class="main">
+    <div class="container">
+      <form method="post" #otp="ngForm">
         <div class="form-group">
-          <label for="outros">Local: </label>
-          <input
-            type="text"
-            id="outros"
-            name="outros"
-            class="form-control"
-            placeholder="Digite o local escolhido"
-            [(ngModel)]="orcamento.localEscolhido"
-          />
+          <h1>Preencha todos os campos</h1>
+          <mat-form-field class="form-field">
+            <mat-label>Nome</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Celular</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>E-mail</mat-label>
+            <input matInput>
+          </mat-form-field>
+      </div>
+        <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
+        <img src="./.././../assets/novo_piercing.jpeg" />
+
+        <mat-form-field class="form-field">
+          <mat-label>Local</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <div class="form-group">
+          <div class="datetime">
+            <mat-form-field>
+              <mat-label>Escolha uma data</mat-label>
+              <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Escolha um hórario</mat-label>
+              <input matInput type="time">
+            </mat-form-field>
+          </div>
         </div>
         <div>
-          <p>Em dúvida do nome do lugar? Dê uma olhada na imagem abaixo:</p>
-          <img
-            src="./.././../assets/novo_piercing.jpeg"
-          />
+          <button mat-raised-button [mat-dialog-close]="true" (click)="abreDialog()">
+            Enviar
+          </button>
+          <button mat-raised-button [mat-dialog-close]>Cancelar</button>
         </div>
-      </div>
-      <div>
-        <button mat-raised-button [mat-dialog-close]="true" type="submit">
-          Enviar
-        </button>
-        <button mat-raised-button [mat-dialog-close]>Cancelar</button>
-      </div>
-    </form>
-  </div>
-</section>
+      </form>
+    </div>
+  </section>
+</body>
