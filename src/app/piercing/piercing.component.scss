@@ -10,9 +10,21 @@ form {
   flex-direction: column;
 }
 
-label {
-  display: inline-block;
-  width: 90px;
+::ng-deep .mat-focused .mat-form-field-label {
+  color: #c3bebe !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  background-color: #c3bebe !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+ background-color: #c3bebe !important;;
+}
+
+.divider {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 input {
@@ -23,9 +35,8 @@ input {
 }
 
 img {
-  margin-left: 45px;
-  max-width: 80%;
-  max-height: 60%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .mat-dialog-container {
@@ -34,4 +45,26 @@ img {
   border-radius: 4px;
   box-sizing: border-box;
   overflow: auto;
+}
+
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
+  max-height: 65vh;
+  overflow: initial;
+}
+
+.bt {
+  display: flex;
+  gap: 8px;
+}
+
+.save-button {
+  background: #c3bebe;
+}
+
+.cancel-button:hover {
+  background-color: red;
+  color: white;
 }

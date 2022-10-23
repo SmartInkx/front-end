@@ -1,9 +1,9 @@
+import { Piercing } from './../shared/Piercing';
 import { PiercingService } from './piercing.service';
 import { Component, OnInit } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './../modal/modal.component';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-piercing',
@@ -11,25 +11,25 @@ import { ModalComponent } from './../modal/modal.component';
   styleUrls: ['./piercing.component.scss'],
 })
 export class PiercingComponent implements OnInit {
-  orcamentosPiercing: Array<any>;
-  orcamento: any;
+  formPiercing: FormGroup;
 
   constructor(
     private service: PiercingService,
+    private FormBuilder: FormBuilder,
     public dialog: MatDialog,
-    private dateAdapter: DateAdapter<Date>
-    ) {
-      this.dateAdapter.setLocale('br');
-    }
+    ) { }
 
   ngOnInit(): void {
-    this.orcamento = {};
+    this.createForm(new Piercing());
   }
 
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    return day !== 0 && day !== 7;
-  };
+  public createForm(piercing: Piercing) {
+    this.formPiercing = this.FormBuilder.group({
+      nome: [piercing.nome, [Validators.required]],
+      telefone: [piercing.telefone, [Validators.required, Validators.minLength(6)]],
+      localPiercing: [piercing.localPiercing, [Validators.required]]
+    })
+  }
 
   abreDialog() {
     const dialogRef = this.dialog.open(ModalComponent, {
@@ -38,11 +38,7 @@ export class PiercingComponent implements OnInit {
     dialogRef.afterClosed()
   }
 
-  orcamentoPiercing(otp) {
-    this.service.orcamentoPiercing(this.orcamento).subscribe((resposta) => {
-      this.orcamentosPiercing.push(resposta);
-
-      otp.reset();
-    });
+  onSubmit() {
+    console.log(this.formPiercing.value)
   }
 }

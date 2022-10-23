@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -7,9 +8,11 @@ import { HttpClient } from '@angular/common/http';
 export class TattooService {
   loginUrl = 'api/orcamento/enviarOrcamentoTatuagem';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient
+    ) {}
 
-  orcamentoTattoo(orcamento: any) {
-    return this.http.post(this.loginUrl, orcamento);
+  public agendamentoTattoo(tattoo) {
+    return this.http.post(this.loginUrl, tattoo).pipe(take(1));
   }
 }

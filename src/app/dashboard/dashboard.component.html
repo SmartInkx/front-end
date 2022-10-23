@@ -48,7 +48,19 @@
                 <mat-label>Profissional</mat-label>
                 <input matInput> Kit
               </mat-form-field>
-              <button mat-button >Editar</button>
+              <mat-form-field class="form-field">
+                <mat-label>Valor</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Material</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <mat-form-field class="form-field">
+                <mat-label>Estilo</mat-label>
+                <input matInput>
+              </mat-form-field>
+              <button mat-button>Editar</button>
               <button mat-button matStepperNext>Próximo</button>
             </ng-template>
           </mat-step>
@@ -67,61 +79,6 @@
               </mat-form-field>
               <button mat-button matStepperPrevious>Voltar</button>
               <button mat-button>Enviar</button>
-            </ng-template>
-          </mat-step>
-        </mat-stepper>
-      </mat-expansion-panel>
-    </mat-accordion>
-    <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-                           (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            1. Jane Doe
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-stepper orientation="horizontal">
-          <mat-step>
-            <ng-template matStepLabel>Confirme as informações</ng-template>
-            <ng-template matStepContent>
-              <mat-form-field class="form-field">
-                <mat-label>Nome</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field class="form-field">
-                <mat-label>Celular</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field class="form-field">
-                <mat-label>Tipo</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field class="form-field">
-                <mat-label>Local</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field class="form-field">
-                <mat-label>Profissional</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <button mat-button matStepperNext>Próximo</button>
-            </ng-template>
-          </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Selecione data e hora</ng-template>
-            <ng-template matStepContent>
-              <mat-form-field class="form-field">
-                <mat-label>Escolha uma data</mat-label>
-                <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
-              <mat-form-field class="form-field">
-                <mat-label>Escolha um hórario</mat-label>
-                <input matInput type="time">
-              </mat-form-field>
-              <button mat-button matStepperPrevious>Voltar</button>
-              <button mat-button matStepperNext>Enviar</button>
             </ng-template>
           </mat-step>
         </mat-stepper>
