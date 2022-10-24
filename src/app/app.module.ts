@@ -35,6 +35,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './login/auth.service';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatStepperModule,
     MatExpansionModule,
-
+    NgxMaskModule.forRoot(),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

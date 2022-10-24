@@ -4,9 +4,10 @@
   </div>
   <form class="login-info" [formGroup]="form">
     <div class="login">
-      <label for="email"
-        >E-mail:
+      <mat-form-field class="e">
+        <mat-label>E-mail</mat-label>
         <input
+          matInput
           type="text"
           id="email"
           name="email"
@@ -15,20 +16,35 @@
           formControlName="email"
           required
         />
-      </label>
-      <label for="senha"
-        >Senha:
+        <mat-error *ngIf="form.get('email').errors?.['email']"
+          ><span class="error">E-mail inválido</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('email')?.errors?.['required'] && form.get('email')?.touched"
+        >
+          <span class="error">Campo obrigatório</span></mat-error
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
         <input
+          matInput
           type="password"
           id="senha"
           name="senha"
           class="form-control"
-          placeholder="Digite sua senha"
+          placeholder="Digite a senha"
           formControlName="senha"
           required
         />
-      </label>
-      <button mat-raised-button [disabled]="!form.valid" (click)="login()">LOGIN</button>
+        <mat-error
+          *ngIf="form.get('senha')?.errors?.['required'] && form.get('senha')?.touched"
+          >Campo obrigatório</mat-error
+        >
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!form.valid" (click)="login()">
+        LOGIN
+      </button>
     </div>
   </form>
 </div>

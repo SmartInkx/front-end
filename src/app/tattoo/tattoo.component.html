@@ -1,44 +1,86 @@
-  <body>
-    <section class="main">
-      <mat-dialog-content>
-        <div class="container">
-          <form [formGroup]="formTattoo" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-              <h1>Preencha todos os campos</h1>
-                <mat-form-field class="form-field">
-                  <mat-label>Nome</mat-label>
-                  <input matInput type="text" class="form-control" name="nome" id="nome" formControlName="nome">
-                  <mat-error *ngIf="formTattoo.get('nome')?.errors?.['required'] && formTattoo.get('nome')?.touched">Campo obrigatório</mat-error>
-                </mat-form-field>
-                <div class="divider"></div>
-              <mat-form-field class="form-field">
-                <mat-label>Celular</mat-label>
-                <input matInput type="text" class="form-control" name="telefone" id="telefone" formControlName="telefone">
-                <mat-error *ngIf="formTattoo.get('telefone')?.errors?.['required'] && formTattoo.get('telefone')?.touched">Campo obrigatório</mat-error>
-              </mat-form-field>
-              <div class="divider"></div>
-          </div>
-            <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
-            <img src="./.././../assets/tattoo.jpg" />
+<body>
+  <section class="main">
+    <mat-dialog-content>
+      <div class="container">
+        <form [formGroup]="formTattoo" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <h1>Preencha todos os campos</h1>
             <mat-form-field class="form-field">
-              <mat-label>Local</mat-label>
-              <input matInput type="text" class="form-control" name="localTatuagem" id="localTatuagem" formControlName="localTatuagem">
-              <mat-error *ngIf="formTattoo.get('localTatuagem')?.errors?.['required'] && formTattoo.get('localTatuagem')?.touched">Campo obrigatório</mat-error>
+              <mat-label>Nome</mat-label>
+              <input
+                matInput
+                type="text"
+                class="form-control"
+                name="nome"
+                id="nome"
+                formControlName="nome"
+              />
+              <mat-error
+                *ngIf="formTattoo.get('nome')?.errors?.['required'] && formTattoo.get('nome')?.touched"
+                >Campo obrigatório</mat-error
+              >
             </mat-form-field>
             <div class="divider"></div>
-            <div class="form-group">
-              <h3>*Seu agendamento será enviado para a análise e dentro de 72H um membro de nossa equipe entrará em contato.</h3>
-            </div>
-            <div class="bt">
-              <button type="submit" class="save-button" [disabled]="!formTattoo.valid" mat-raised-button [mat-dialog-close]="true" (click)="abreDialog()">
-                Enviar
-              </button>
-              <button class="cancel-button" mat-raised-button [mat-dialog-close]>Cancelar</button>
-            </div>
-          </form>
-          <br/>
-        </div>
-      </mat-dialog-content>
-
-    </section>
-  </body>
+            <mat-form-field class="form-field">
+              <mat-label>Celular</mat-label>
+              <input
+                matInput
+                type="text"
+                class="form-control"
+                name="telefone"
+                id="telefone"
+                [mask]="'(00)00000-0000'"
+                formControlName="telefone"
+              />
+              <mat-error
+                *ngIf="formTattoo.get('telefone')?.errors?.['required'] && formTattoo.get('telefone')?.touched"
+                >Campo obrigatório</mat-error
+              >
+            </mat-form-field>
+            <div class="divider"></div>
+          </div>
+          <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
+          <img src="./.././../assets/tattoo.jpg" />
+          <mat-form-field class="form-field">
+            <mat-label>Local</mat-label>
+            <input
+              matInput
+              type="text"
+              class="form-control"
+              name="localTatuagem"
+              id="localTatuagem"
+              formControlName="localTatuagem"
+            />
+            <mat-error
+              *ngIf="formTattoo.get('localTatuagem')?.errors?.['required'] && formTattoo.get('localTatuagem')?.touched"
+              >Campo obrigatório</mat-error
+            >
+          </mat-form-field>
+          <div class="divider"></div>
+          <div class="form-group">
+            <h3>
+              *Seu agendamento será enviado para a análise e dentro de 72H um
+              membro de nossa equipe entrará em contato.
+            </h3>
+          </div>
+          <div class="bt">
+            <button
+              type="submit"
+              class="save-button"
+              [disabled]="!formTattoo.valid"
+              mat-raised-button
+              [mat-dialog-close]="true"
+              (click)="abreDialog()"
+            >
+              Enviar
+            </button>
+            <button class="cancel-button" mat-raised-button [mat-dialog-close]>
+              Cancelar
+            </button>
+          </div>
+        </form>
+        <br />
+      </div>
+    </mat-dialog-content>
+  </section>
+</body>

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { TattooService } from './tattoo.service';
 import { MatDialog } from '@angular/material/dialog';
-import { UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { Tattoo } from '../shared/Tattoo'
 
@@ -14,11 +14,11 @@ import { Tattoo } from '../shared/Tattoo'
 })
 
 export class TattooComponent implements OnInit {
-  formTattoo: UntypedFormGroup;
+  formTattoo: FormGroup;
 
   constructor(
     private service: TattooService,
-    private FormBuilder: UntypedFormBuilder,
+    private FormBuilder: FormBuilder,
     public route: Router,
     public dialog: MatDialog
     ) { }

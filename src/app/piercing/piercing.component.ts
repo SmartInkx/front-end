@@ -3,7 +3,7 @@ import { PiercingService } from './piercing.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './../modal/modal.component';
-import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-piercing',
@@ -11,11 +11,11 @@ import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms
   styleUrls: ['./piercing.component.scss'],
 })
 export class PiercingComponent implements OnInit {
-  formPiercing: UntypedFormGroup;
+  formPiercing: FormGroup;
 
   constructor(
     private service: PiercingService,
-    private FormBuilder: UntypedFormBuilder,
+    private FormBuilder: FormBuilder,
     public dialog: MatDialog,
     ) { }
 

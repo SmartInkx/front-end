@@ -6,11 +6,12 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: dbdad7;
-  gap: 18%;
+  gap: 30%;
 
   .image img {
-    width: 50vw;
-    height: 100vh;
+    margin-left: 30px;
+    width: 100%;
+    max-height: 100%;
   }
 
   .login-info{
@@ -44,7 +45,27 @@
   }
 
   button {
+    margin-top: 5px;
     width: 40%;
     height: 40px;
   }
+}
+
+input {
+  color: #9b8b65;
+}
+
+mat-error {
+  margin-bottom: 10px;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+  color: #b6a681 !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  background-color: #b6a681 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+ background-color: #b6a681 !important;;
 }

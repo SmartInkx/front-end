@@ -7,33 +7,73 @@
             <h1>Preencha todos os campos</h1>
             <mat-form-field class="form-field">
               <mat-label>Nome</mat-label>
-              <input matInput type="text" class="form-control" name="nome" id="nome" formControlName="nome">
-              <mat-error *ngIf="formPiercing.get('nome')?.errors?.['required'] && formPiercing.get('nome')?.touched">Campo obrigatório</mat-error>
+              <input
+                matInput
+                type="text"
+                class="form-control"
+                name="nome"
+                id="nome"
+                formControlName="nome"
+              />
+              <mat-error
+                *ngIf="formPiercing.get('nome')?.errors?.['required'] && formPiercing.get('nome')?.touched"
+                >Campo obrigatório</mat-error
+              >
             </mat-form-field>
             <div class="divider"></div>
             <mat-form-field class="form-field">
               <mat-label>Celular</mat-label>
-              <input matInput type="text" class="form-control" name="telefone" id="telefone" formControlName="telefone">
-              <mat-error *ngIf="formPiercing.get('telefone')?.errors?.['required'] && formPiercing.get('telefone')?.touched">Campo obrigatório</mat-error>
+              <input
+                matInput
+                type="text"
+                class="form-control"
+                name="telefone"
+                id="telefone"
+                [mask]="'(00)00000-0000'"
+                formControlName="telefone"
+              />
+              <mat-error
+                *ngIf="formPiercing.get('telefone')?.errors?.['required'] && formPiercing.get('telefone')?.touched"
+                >Campo obrigatório</mat-error
+              >
             </mat-form-field>
             <div class="divider"></div>
-        </div>
-        <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
-        <img src="./.././../assets/novo_piercing.jpeg" />
+          </div>
+          <h1>Em dúvida sobre o lugar? De uma olhada na imagem abaixo:</h1>
+          <img src="./.././../assets/novo_piercing.jpeg" />
           <mat-form-field class="form-field">
             <mat-label>Local</mat-label>
-            <input matInput type="text" class="form-control" name="localPiercing" id="localPiercing" formControlName="localPiercing">
-            <mat-error *ngIf="formPiercing.get('localPiercing')?.errors?.['required'] && formPiercing.get('localPiercing')?.touched">Campo obrigatório</mat-error>
+            <input
+              matInput
+              type="text"
+              class="form-control"
+              name="localPiercing"
+              id="localPiercing"
+              formControlName="localPiercing"
+            />
+            <mat-error
+              *ngIf="formPiercing.get('localPiercing')?.errors?.['required'] && formPiercing.get('localPiercing')?.touched"
+              >Campo obrigatório</mat-error
+            >
           </mat-form-field>
           <div class="divider"></div>
           <div class="bt">
-            <button type="submit" class="save-button" [disabled]="!formPiercing.valid" mat-raised-button [mat-dialog-close]="true" (click)="abreDialog()">
+            <button
+              type="submit"
+              class="save-button"
+              [disabled]="!formPiercing.valid"
+              mat-raised-button
+              [mat-dialog-close]="true"
+              (click)="abreDialog()"
+            >
               Enviar
             </button>
-            <button class="cancel-button" mat-raised-button [mat-dialog-close]>Cancelar</button>
+            <button class="cancel-button" mat-raised-button [mat-dialog-close]>
+              Cancelar
+            </button>
           </div>
         </form>
-        <br/>
+        <br />
       </div>
     </mat-dialog-content>
   </section>

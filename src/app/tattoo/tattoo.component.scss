@@ -5,6 +5,10 @@ form {
   border-radius: 1em;
 }
 
+.form-group {
+  color: gray;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -32,6 +36,7 @@ input {
   width: 300px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  color: gray;
 }
 
 img {
