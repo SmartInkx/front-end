@@ -3,12 +3,29 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  background-color: gray;
+  background-color: rgb(200, 200, 200);
   width: 180px;
 }
+
 mat-icon {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.icon {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
 }
 
 mat-toolbar {
@@ -21,7 +38,7 @@ mat-toolbar {
 h1 {
   padding: 15px;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .form-field {
@@ -30,11 +47,17 @@ h1 {
   width: 25%;
 }
 
-.mat-accordion{
+.mat-accordion {
   display: grid;
   margin: auto;
   width: 50%;
   padding: 5px;
+}
+
+.titulo {
+  margin-left: 8%;
+  margin-top: 1%;
+  text-transform: uppercase;
 }
 
 .bt {
