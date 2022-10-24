@@ -36,6 +36,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './login/auth.service';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMaskModule } from 'ngx-mask';
+import { AgendamentosComponent } from './dashboard/agendamentos/agendamentos.component';
+import { FinalizadosComponent } from './dashboard/finalizados/finalizados.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { NgxMaskModule } from 'ngx-mask';
     ModalPercingComponent,
     AgendamentoComponent,
     DashboardComponent,
+    AgendamentosComponent,
+    FinalizadosComponent,
   ],
   imports: [
     BrowserModule,
