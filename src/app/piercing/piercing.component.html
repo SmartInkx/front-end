@@ -11,12 +11,12 @@
                 matInput
                 type="text"
                 class="form-control"
-                name="nome"
-                id="nome"
-                formControlName="nome"
+                name="nome_cliente"
+                id="nome_cliente"
+                formControlName="nome_cliente"
               />
               <mat-error
-                *ngIf="formPiercing.get('nome')?.errors?.['required'] && formPiercing.get('nome')?.touched"
+                *ngIf="formPiercing.get('nome_cliente')?.errors?.['required'] && formPiercing.get('nome_cliente')?.touched"
                 >Campo obrigatório</mat-error
               >
             </mat-form-field>
@@ -47,12 +47,12 @@
               matInput
               type="text"
               class="form-control"
-              name="localPiercing"
-              id="localPiercing"
-              formControlName="localPiercing"
+              name="local_piercing"
+              id="local_piercing"
+              formControlName="local_piercing"
             />
             <mat-error
-              *ngIf="formPiercing.get('localPiercing')?.errors?.['required'] && formPiercing.get('localPiercing')?.touched"
+              *ngIf="formPiercing.get('local_piercing')?.errors?.['required'] && formPiercing.get('local_piercing')?.touched"
               >Campo obrigatório</mat-error
             >
           </mat-form-field>
@@ -64,7 +64,6 @@
               [disabled]="!formPiercing.valid"
               mat-raised-button
               [mat-dialog-close]="true"
-              (click)="abreDialog()"
             >
               Enviar
             </button>

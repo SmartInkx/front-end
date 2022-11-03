@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PiercingService {
-  orcamentoPiercingUrl = 'api/orcamento/enviarOrcamentoPiercing';
 
-  constructor(private http: HttpClient) {}
+  api = 'api/agendamentopiercing/enviaragendamentopiercing';
 
-  orcamentoPiercing(orcamento: any) {
-    return this.http.post(this.orcamentoPiercingUrl, orcamento);
-  }
+  constructor(
+    private http: HttpClient
+    ) {}
+
+    public agendamentoPiercing(piercing) {
+      return this.http.post(this.api, piercing).pipe(take(1));
+    }
 }

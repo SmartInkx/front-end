@@ -1,10 +1,10 @@
 export class Piercing {
-  nome: string = '';
-  nomeProfissional: string = '';
+  nome_cliente: string = '';
+  nome_profissional: string = '';
   valor: string = '';
-  localPiercing: string = '';
+  local_piercing: string = '';
   telefone: string = '';
   data: string = '';
   horario: string = '';
-  materialPiercing: string = '';
+  material_piercing_id: string = '';
 }

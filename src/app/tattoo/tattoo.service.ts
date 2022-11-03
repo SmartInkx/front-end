@@ -6,13 +6,13 @@ import { take } from 'rxjs';
   providedIn: 'root',
 })
 export class TattooService {
-  loginUrl = 'api/orcamento/enviarOrcamentoTatuagem';
+  api = 'api/agendamentotatuagem/enviaragendamentotatuagem';
 
   constructor(
     private http: HttpClient
     ) {}
 
   public agendamentoTattoo(tattoo) {
-    return this.http.post(this.loginUrl, tattoo).pipe(take(1));
+    return this.http.post(this.api, tattoo).pipe(take(1));
   }
 }

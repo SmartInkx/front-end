@@ -11,12 +11,12 @@
                 matInput
                 type="text"
                 class="form-control"
-                name="nome"
-                id="nome"
-                formControlName="nome"
+                name="nome_cliente"
+                id="nome_cliente"
+                formControlName="nome_cliente"
               />
               <mat-error
-                *ngIf="formTattoo.get('nome')?.errors?.['required'] && formTattoo.get('nome')?.touched"
+                *ngIf="formTattoo.get('nome_cliente')?.errors?.['required'] && formTattoo.get('nome_cliente')?.touched"
                 >Campo obrigatório</mat-error
               >
             </mat-form-field>
@@ -47,12 +47,12 @@
               matInput
               type="text"
               class="form-control"
-              name="localTatuagem"
-              id="localTatuagem"
-              formControlName="localTatuagem"
+              name="local_tatuagem"
+              id="local_tatuagem"
+              formControlName="local_tatuagem"
             />
             <mat-error
-              *ngIf="formTattoo.get('localTatuagem')?.errors?.['required'] && formTattoo.get('localTatuagem')?.touched"
+              *ngIf="formTattoo.get('local_tatuagem')?.errors?.['required'] && formTattoo.get('local_tatuagem')?.touched"
               >Campo obrigatório</mat-error
             >
           </mat-form-field>
@@ -70,7 +70,6 @@
               [disabled]="!formTattoo.valid"
               mat-raised-button
               [mat-dialog-close]="true"
-              (click)="abreDialog()"
             >
               Enviar
             </button>

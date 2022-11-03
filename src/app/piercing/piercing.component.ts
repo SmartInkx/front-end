@@ -25,9 +25,9 @@ export class PiercingComponent implements OnInit {
 
   public createForm(piercing: Piercing) {
     this.formPiercing = this.FormBuilder.group({
-      nome: [piercing.nome, [Validators.required]],
+      nome_cliente: [piercing.nome_cliente, [Validators.required]],
       telefone: [piercing.telefone, [Validators.required, Validators.minLength(6)]],
-      localPiercing: [piercing.localPiercing, [Validators.required]]
+      local_piercing: [piercing.local_piercing, [Validators.required]]
     })
   }
 
@@ -38,7 +38,10 @@ export class PiercingComponent implements OnInit {
     dialogRef.afterClosed()
   }
 
-  onSubmit() {
-    console.log(this.formPiercing.value)
+  public onSubmit(): void {
+    console.log(this.formPiercing.value);
+    this.service.agendamentoPiercing(this.formPiercing.value).subscribe(
+      success => this.abreDialog()
+    );
   }
 }

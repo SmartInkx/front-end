@@ -1,10 +1,10 @@
 export class Tattoo {
-    nome: string = '';
-    nomeProfissional: string = '';
+    nome_cliente: string = '';
+    nome_profissional: string = '';
     valor: string = '';
-    localTatuagem: string = '';
+    local_tatuagem: string = '';
     telefone: string = '';
     data: string = '';
     horario: string = '';
-    estiloTatuagem: string = '';
+    estilo_tatuagem_id: string = '';
 }

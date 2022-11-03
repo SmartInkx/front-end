@@ -29,9 +29,9 @@ export class TattooComponent implements OnInit {
 
   public createForm(tattoo: Tattoo): void {
     this.formTattoo = this.FormBuilder.group({
-      nome: [tattoo.nome, [Validators.required]],
+      nome_cliente: [tattoo.nome_cliente, [Validators.required]],
       telefone: [tattoo.telefone, [Validators.required, Validators.minLength(11)]],
-      localTatuagem: [tattoo.localTatuagem, [Validators.required]]
+      local_tatuagem: [tattoo.local_tatuagem, [Validators.required]]
     })
   }
 
