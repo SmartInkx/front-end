@@ -33,11 +33,11 @@ import { AgendamentoComponent } from './agendamento/agendamento.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AuthService } from './login/auth.service';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMaskModule } from 'ngx-mask';
-import { AgendamentosComponent } from './dashboard/agendamentos/agendamentos.component';
-import { FinalizadosComponent } from './dashboard/finalizados/finalizados.component';
+import { AuthenticationComponent } from './login/authentication/authentication.component';
+import { AgendamentosTattooComponent } from './dashboard/agendamentos-tattoo/agendamentos-tattoo.component';
+import { AgendamentosPiercingComponent } from './dashboard/agendamentos-piercing/agendamentos-piercing.component';
 
 @NgModule({
   declarations: [
@@ -52,8 +52,9 @@ import { FinalizadosComponent } from './dashboard/finalizados/finalizados.compon
     ModalPercingComponent,
     AgendamentoComponent,
     DashboardComponent,
-    AgendamentosComponent,
-    FinalizadosComponent,
+    AuthenticationComponent,
+    AgendamentosTattooComponent,
+    AgendamentosPiercingComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +84,7 @@ import { FinalizadosComponent } from './dashboard/finalizados/finalizados.compon
     MatExpansionModule,
     NgxMaskModule.forRoot(),
   ],
-  providers: [AuthService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
