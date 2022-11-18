@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
-import { ModalTattoComponent } from '../modal-tattoo/modal-tatto.component';
-import { ModalPercingComponent } from '../modal-percing/modal-percing.component';
+import { ModalTattooComponent } from '../modal-tattoo/modal-tattoo.component';
+import { ModalPiercingComponent } from '../modal-piercing/modal-piercing.component';
 import { MatDialog } from '@angular/material/dialog';
-import { AgendamentosTattoo } from './agendamentos-tattoo/agendamentosTattoo';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,27 +14,19 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private dateAdapter: DateAdapter<Date>
-  ) {
-    this.dateAdapter.setLocale('br');
-  }
+  ) { }
 
   ngOnInit(): void {}
 
   abreDialog() {
-    const dialogRef = this.dialog.open(ModalTattoComponent, {
+    const dialogRef = this.dialog.open(ModalTattooComponent, {
       maxWidth: '100vw',
       maxHeight: '85vh',
     });
     dialogRef.afterClosed();
   }
   openDialog() {
-    const dialogRef = this.dialog.open(ModalPercingComponent);
+    const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
   }
-
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    return day !== 0 && day !== 7;
-  };
 }

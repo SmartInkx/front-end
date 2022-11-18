@@ -68,15 +68,8 @@ input.mat-input-element {
   width: 25%;
 }
 
-#hora {
+#hora{
   width: 25%;
-}
-
-.mat-accordion {
-  display: grid;
-  margin: auto;
-  width: 50%;
-  padding: 5px;
 }
 
 .titulo {
@@ -90,6 +83,17 @@ input.mat-input-element {
   gap: 10px;
 }
 
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-card {
+  width: 50%
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -99,17 +103,17 @@ input.mat-input-element {
     gap: 10px;
   }
 
-  .onedit:hover {
+  .onedit:hover{
     background-color: rgb(233, 233, 7);
     color: gray;
   }
 
-  .next:hover {
+  .next:hover{
     background-color: #c3bebe;
     color: white;
   }
 
-  .ondelete:hover {
+  .ondelete:hover{
     background-color: red;
     color: white;
   }
@@ -127,8 +131,9 @@ input.mat-input-element {
     margin-bottom: 2px;
   }
 
-  .submit:hover {
+  .submit:hover{
     background-color: #3f51b5;
     color: white;
   }
+
 }

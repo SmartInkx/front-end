@@ -8,7 +8,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  // text-transform: capitalize;
   transition: 0.2s linear;
 }
 
@@ -210,7 +209,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../../assets/background.png) no-repeat;
+  background: url(../../assets/images/background.png) no-repeat;
   background-size: cover;
   background-position: center;
 }

@@ -1,31 +1,36 @@
-import { AgendamentosPiercing } from './agendamentosPiercing';
+
 import { Component, OnInit } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalPiercingComponent } from 'src/app/modal-piercing/modal-piercing.component';
 import { ModalTattooComponent } from 'src/app/modal-tattoo/modal-tattoo.component';
-import { AgendamentosPiercingService } from './agendamentos-piercing.service';
+import { AgendamentosTattooService } from '../agendamentos-tattoo.service';
+import { AgendamentosTattoo } from '../agendamentosTattoo';
 
 @Component({
-  selector: 'app-agendamentos-piercing',
-  templateUrl: './agendamentos-piercing.component.html',
-  styleUrls: ['./agendamentos-piercing.component.scss'],
+  selector: 'app-atualizar-tattoo',
+  templateUrl: './atualizar-tattoo.component.html',
+  styleUrls: ['./atualizar-tattoo.component.scss'],
 })
-export class AgendamentosPiercingComponent implements OnInit {
+export class AtualizarTattooComponent implements OnInit {
   opened = false;
   panelOpenState = false;
-  agendamentosPiercing: AgendamentosPiercing[];
+  agendamentosTattoo: AgendamentosTattoo;
 
   constructor(
     public dialog: MatDialog,
     private dateAdapter: DateAdapter<Date>,
-    private service: AgendamentosPiercingService
+    private service: AgendamentosTattooService,
+    private router: Router,
+    private activatedRouter: ActivatedRoute
   ) {
     this.dateAdapter.setLocale('br');
   }
 
   ngOnInit(): void {
-    this.service.listarPiercing().subscribe(data => this.agendamentosPiercing = data);
+    const id = this.activatedRouter.snapshot.paramMap.get('id')
+    this.service.listarTattooId(id).subscribe(tatoo => this.agendamentosTattoo = tatoo)
   }
 
   abreDialog() {
@@ -35,15 +40,10 @@ export class AgendamentosPiercingComponent implements OnInit {
     });
     dialogRef.afterClosed();
   }
+
   openDialog() {
     const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
-  }
-
-  onList(): void {
-    this.service
-      .listarPiercing()
-      .subscribe((data) => (this.agendamentosPiercing = data));
   }
 
   myFilter = (d: Date | null): boolean => {
@@ -51,14 +51,18 @@ export class AgendamentosPiercingComponent implements OnInit {
     return day !== 0 && day !== 7;
   };
 
-  onDelete(agendamentos: AgendamentosPiercing): void {
-    this.service.deletePiercing(agendamentos.id).subscribe(() => {
+  updateTatto(): void {
+    this.service.atualizarTatto(this.agendamentosTattoo).subscribe(() => {
       this.service.showText(
         'SISTEMA',
-        `Agendamento excluído com sucesso`,
-        'toast-error'
+        `Agendamento alterado com sucesso`,
+        'toast-success'
       );
-    });
-    this.onList();
+    })
+    this.goBack();
+  }
+
+  goBack(): void {
+    this.router.navigate(['/agendamentostattoo'])
   }
 }

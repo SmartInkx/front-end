@@ -1,5 +1,6 @@
+import { LoginService } from './login.service';
 import { Router } from '@angular/router';
-import { AuthService } from './auth.service';
+import { AuthService } from './authentication/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private service: LoginService,
     private formBuilder: FormBuilder,
     ) {}
 
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(["/dashboard"]);
-    console.log(this.form)
-  }
+    const {email, senha} = this.form.value;
+    this.form.reset();
+    this.service.login(email, senha).subscribe()
+    this.router.navigate(["/dashboard"]);  }
 }

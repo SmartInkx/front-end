@@ -35,12 +35,6 @@ mat-toolbar {
   align-items: center;
 }
 
-h1 {
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-}
-
 .form-field {
   display: flex;
   flex-direction: row;
@@ -63,4 +57,58 @@ h1 {
 .bt {
   display: flex;
   gap: 10px;
+}
+.main {
+  margin-top: 20px;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.cards {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#card {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+#cards {
+  box-shadow: rgb(0 0 0 / 0) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px
+}
+
+#cards:hover {
+  width: 345px;
+  height: 415px;
+}
+
+#images {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(123, 123, 225);
 }

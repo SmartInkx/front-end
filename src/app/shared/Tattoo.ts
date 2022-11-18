@@ -1,4 +1,5 @@
 export class Tattoo {
+    id: string = '';
     nome_cliente: string = '';
     nome_profissional: string = '';
     valor: string = '';

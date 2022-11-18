@@ -1,4 +1,7 @@
 import { MatListModule } from '@angular/material/list';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import { ToastrModule } from 'ngx-toastr';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
@@ -14,18 +17,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatExpansionModule } from '@angular/material/expansion';
 
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SkullTatooComponent } from './skulltatoo/skulltatoo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
-import { ModalComponent } from './modal/modal.component';
 import { TattooComponent } from './tattoo/tattoo.component';
 import { PiercingComponent } from './piercing/piercing.component';
-import { ModalTattoComponent } from './modal-tattoo/modal-tatto.component';
-import { ModalPercingComponent } from './modal-percing/modal-percing.component';
+import { ModalTattooComponent } from './modal-tattoo/modal-tattoo.component';
+import { ModalPiercingComponent } from './modal-piercing/modal-piercing.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -38,6 +40,8 @@ import { NgxMaskModule } from 'ngx-mask';
 import { AuthenticationComponent } from './login/authentication/authentication.component';
 import { AgendamentosTattooComponent } from './dashboard/agendamentos-tattoo/agendamentos-tattoo.component';
 import { AgendamentosPiercingComponent } from './dashboard/agendamentos-piercing/agendamentos-piercing.component';
+import { AtualizarTattooComponent } from './dashboard/agendamentos-tattoo/atualizar-tattoo/atualizar-tattoo.component';
+import { FinalizadosComponent } from './dashboard/finalizados/finalizados.component';
 
 @NgModule({
   declarations: [
@@ -45,16 +49,17 @@ import { AgendamentosPiercingComponent } from './dashboard/agendamentos-piercing
     HomeComponent,
     SkullTatooComponent,
     LoginComponent,
-    ModalComponent,
     TattooComponent,
     PiercingComponent,
-    ModalTattoComponent,
-    ModalPercingComponent,
+    ModalTattooComponent,
+    ModalPiercingComponent,
     AgendamentoComponent,
     DashboardComponent,
     AuthenticationComponent,
     AgendamentosTattooComponent,
     AgendamentosPiercingComponent,
+    AtualizarTattooComponent,
+    FinalizadosComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +87,11 @@ import { AgendamentosPiercingComponent } from './dashboard/agendamentos-piercing
     MatInputModule,
     MatStepperModule,
     MatExpansionModule,
+    MatPaginatorModule,
+    MatTableModule,
     NgxMaskModule.forRoot(),
+    ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

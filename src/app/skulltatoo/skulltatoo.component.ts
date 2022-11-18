@@ -1,7 +1,6 @@
 import { Router, Routes } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
-import { ModalComponent } from '../modal/modal.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -10,18 +9,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   styleUrls: ['./skulltatoo.component.scss'],
 })
 export class SkullTatooComponent implements OnInit {
-  constructor(
-    public dialog: MatDialog,
-    public route: Router
-    ) {}
+  constructor(public dialog: MatDialog, public route: Router) {}
 
   ngOnInit(): void {}
 
-
-  openDialog() {
-    const dialogRef = this.dialog.open(ModalComponent);
-    dialogRef.afterClosed();
-  }
   banneSlider: any = {
     loop: true,
     mouseDrag: true,
@@ -32,18 +23,18 @@ export class SkullTatooComponent implements OnInit {
     navText: [''],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       350: {
-        items: 1
+        items: 1,
       },
       540: {
-        items: 1
+        items: 1,
       },
       940: {
-        items: 1
-      }
+        items: 1,
+      },
     },
-    nav: false
-  }
+    nav: false,
+  };
 }

@@ -1,7 +1,7 @@
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
-import { ModalTattoComponent } from '../modal-tattoo/modal-tatto.component';
-import { ModalPercingComponent } from '../modal-percing/modal-percing.component';
+import { ModalTattooComponent } from '../modal-tattoo/modal-tattoo.component';
+import { ModalPiercingComponent } from '../modal-piercing/modal-piercing.component';
 
 @Component({
   selector: 'app-agendamento',
@@ -18,14 +18,14 @@ export class AgendamentoComponent implements OnInit {
   }
 
   abreDialog() {
-    const dialogRef = this.dialog.open(ModalTattoComponent, {
+    const dialogRef = this.dialog.open(ModalTattooComponent, {
       maxWidth: '100vw',
       maxHeight: '85vh',
     });
     dialogRef.afterClosed()
   }
   openDialog() {
-    const dialogRef = this.dialog.open(ModalPercingComponent);
+    const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed()
   }
 }

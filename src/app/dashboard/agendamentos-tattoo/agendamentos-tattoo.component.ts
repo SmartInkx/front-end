@@ -1,9 +1,10 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { AgendamentosTattooService } from './agendamentos-tattoo.service';
 import { Component, OnInit } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalPercingComponent } from 'src/app/modal-percing/modal-percing.component';
-import { ModalTattoComponent } from 'src/app/modal-tattoo/modal-tatto.component';
+import { ModalPiercingComponent } from 'src/app/modal-piercing/modal-piercing.component';
+import { ModalTattooComponent } from 'src/app/modal-tattoo/modal-tattoo.component';
 import { AgendamentosTattoo } from './agendamentosTattoo';
 
 @Component({
@@ -17,6 +18,8 @@ export class AgendamentosTattooComponent implements OnInit {
   agendamentosTattoo: AgendamentosTattoo[];
 
   constructor(
+    private route: ActivatedRoute,
+    private router: Router,
     public dialog: MatDialog,
     private dateAdapter: DateAdapter<Date>,
     private service: AgendamentosTattooService
@@ -25,23 +28,42 @@ export class AgendamentosTattooComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.listarTattoo().subscribe(data => this.agendamentosTattoo = data);
+    this.onList();
   }
 
   abreDialog() {
-    const dialogRef = this.dialog.open(ModalTattoComponent, {
+    const dialogRef = this.dialog.open(ModalTattooComponent, {
       maxWidth: '100vw',
       maxHeight: '85vh',
     });
     dialogRef.afterClosed();
   }
+
   openDialog() {
-    const dialogRef = this.dialog.open(ModalPercingComponent);
+    const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
   }
 
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    return day !== 0 && day !== 7;
-  };
+  onList(): void {
+    this.service
+      .listarTattoo()
+      .subscribe((data) => (this.agendamentosTattoo = data));
+  }
+
+  onEdit(id) {
+    this.service.atualizarTatto(id);
+    this.router.navigate(['atualizartattoo', id], { relativeTo: this.route });
+  }
+  
+ //verificar onList
+  onDelete(agendamentos: AgendamentosTattoo): void {
+    this.service.deleteTattoo(agendamentos.id).subscribe(() => {
+      this.service.showText(
+        'SISTEMA',
+        `Agendamento excluído com sucesso`,
+        'toast-error'
+      );
+    });
+    this.onList();
+  }
 }

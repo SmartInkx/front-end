@@ -1,9 +1,20 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)]="opened">
-    <p class="icon text" routerLink="/dashboard"><mat-icon>home</mat-icon>Home</p>
-    <p class="icon text" routerLink="/agendamentostattoo"><mat-icon>color_lens</mat-icon>Tattoo</p>
-    <p class="icon text" routerLink="/agendamentospiercing"><mat-icon>panorama_fish_eye</mat-icon>Piercing</p>
-    <p class="icon text" routerLink="/home"> <mat-icon>exit_to_app</mat-icon>Logout</p>
+    <p class="icon text" routerLink="/dashboard">
+      <mat-icon>home</mat-icon>Home
+    </p>
+    <p class="icon text" routerLink="/agendamentostattoo">
+      <mat-icon>color_lens</mat-icon>Tattoo
+    </p>
+    <p class="icon text" routerLink="/agendamentospiercing">
+      <mat-icon>panorama_fish_eye</mat-icon>Piercing
+    </p>
+    <p class="icon text" routerLink="/finalizados">
+      <mat-icon>done_outline</mat-icon>Finalizados
+    </p>
+    <p class="icon text" routerLink="/home">
+      <mat-icon>exit_to_app</mat-icon>Logout
+    </p>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
@@ -24,13 +35,114 @@
     <mat-accordion>
       <mat-expansion-panel
         (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false" *ngFor="let agendamentos of agendamentosPiercing"
+        (closed)="panelOpenState = false"
+        *ngFor="let agendamentos of agendamentosPiercing"
       >
         <mat-expansion-panel-header>
           <mat-panel-title>
-            <td>{{agendamentos.nome_cliente}}</td>
+            <td>{{ agendamentos.nome_cliente }}</td>
           </mat-panel-title>
         </mat-expansion-panel-header>
+        <mat-stepper orientation="horizontal">
+          <mat-step>
+            <ng-template matStepLabel>Confirme as informações</ng-template>
+            <ng-template matStepContent>
+              <div class="container">
+                <div class="main">
+                  <mat-form-field class="form-field">
+                    <mat-label>Nome</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.nome_cliente }}
+                  </mat-form-field>
+                  <mat-form-field class="form-field">
+                    <mat-label>Celular</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.telefone }}
+                  </mat-form-field>
+                  <mat-form-field class="form-field">
+                    <mat-label>Local</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.local_piercing }}
+                  </mat-form-field>
+                </div>
+                <div class="info">
+                  <mat-form-field class="form-input">
+                    <mat-label>Profissional</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.nome_profissional }}
+                  </mat-form-field>
+                  <mat-form-field class="form-input">
+                    <mat-label>Valor</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.valor }}
+                  </mat-form-field>
+                  <mat-form-field class="form-input">
+                    <mat-label>Material</mat-label>
+                    <input matInput readonly="true" disabled="true" />
+                    {{ agendamentos.material_piercing_id }}
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="buttons">
+                <div class="changes">
+                  <button mat-raised-button class="onedit">
+                    <mat-icon>edit</mat-icon>EDITAR
+                  </button>
+                  <button mat-raised-button matStepperNext class="next">
+                    PRÓXIMO<mat-icon id="next">navigate_next</mat-icon>
+                  </button>
+                </div>
+                <div class="delete">
+                  <button mat-raised-button class="ondelete" [swal]="{
+                    title: 'ATENÇÃO',
+                    text: 'Deseja cancelar o agendamento?',
+                    showDenyButton: true,
+                    denyButtonText: 'Não',
+                    confirmButtonText: 'Sim, excluir',
+                    icon: 'warning'
+                  }" (confirm)="onDelete(agendamentos); onList()">
+                    <mat-icon>delete</mat-icon>
+                    CANCELAR AGENDAMENTO
+                  </button>
+                </div>
+              </div>
+            </ng-template>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Selecione data e hora</ng-template>
+            <ng-template matStepContent>
+              <mat-form-field class="form-field" id="data">
+                <mat-label>Escolha uma data</mat-label>
+                <input
+                  matInput
+                  [matDatepickerFilter]="myFilter"
+                  [matDatepicker]="picker"
+                  readonly="true"
+                  disabled="true"
+                />
+                {{ agendamentos.data }}
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="form-field" id="hora">
+                <mat-label>Escolha um hórario</mat-label>
+                <input matInput type="time" readonly="true" disabled="true" />
+                {{ agendamentos.horario }}
+              </mat-form-field>
+              <div class="buttons">
+                <button mat-raised-button matStepperPrevious class="previous">
+                  <mat-icon id="previous">navigate_before</mat-icon>VOLTAR
+                </button>
+                <button mat-raised-button class="submit">
+                  <mat-icon>done_all</mat-icon>ENVIAR
+                </button>
+              </div>
+            </ng-template>
+          </mat-step>
+        </mat-stepper>
       </mat-expansion-panel>
     </mat-accordion>
   </mat-sidenav-content>

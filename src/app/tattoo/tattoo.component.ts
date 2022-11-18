@@ -1,4 +1,3 @@
-import { ModalComponent } from './../modal/modal.component';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { TattooService } from './tattoo.service';
@@ -35,17 +34,13 @@ export class TattooComponent implements OnInit {
     })
   }
 
-  public abreDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent, {
-      maxWidth: '25vw'
-    });
-    dialogRef.afterClosed()
-  }
-
   public onSubmit(): void {
     console.log(this.formTattoo.value);
     this.service.agendamentoTattoo(this.formTattoo.value).subscribe(
-      success => this.abreDialog()
+      success => this.service.showText(
+      'Obrigado',
+      `Agendamento solicitado com sucesso`,
+      'toast-success')
     );
   }
 }

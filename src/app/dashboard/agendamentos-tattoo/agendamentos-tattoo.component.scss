@@ -35,15 +35,40 @@ mat-toolbar {
   align-items: center;
 }
 
+mat-expansion-panel {
+  margin-bottom: 5px;
+}
+
 h1 {
   padding: 15px;
   display: flex;
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  gap: 25%;
+}
+
+input.mat-input-element {
+  margin-top: 3px;
+}
+
 .form-field {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#data {
+  width: 25%;
+}
+
+#hora{
   width: 25%;
 }
 
@@ -63,4 +88,48 @@ h1 {
 .bt {
   display: flex;
   gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  .changes {
+    display: flex;
+    gap: 10px;
+  }
+
+  .onedit:hover{
+    background-color: rgb(233, 233, 7);
+    color: gray;
+  }
+
+  .next:hover{
+    background-color: #c3bebe;
+    color: white;
+  }
+
+  .ondelete:hover{
+    background-color: red;
+    color: white;
+  }
+
+  #next {
+    margin-bottom: 1mm;
+  }
+
+  .previous:hover {
+    background-color: #c3bebe;
+    color: white;
+  }
+
+  #previous {
+    margin-bottom: 2px;
+  }
+
+  .submit:hover{
+    background-color: #3f51b5;
+    color: white;
+  }
+
 }

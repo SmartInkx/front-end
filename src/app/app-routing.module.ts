@@ -1,5 +1,6 @@
+import { FinalizadosComponent } from './dashboard/finalizados/finalizados.component';
+import { AtualizarTattooComponent } from './dashboard/agendamentos-tattoo/atualizar-tattoo/atualizar-tattoo.component';
 import { AgendamentosTattooComponent } from './dashboard/agendamentos-tattoo/agendamentos-tattoo.component';
-// import { AuthGuard } from './login/shared/auth.guard';
 import { AuthenticationComponent } from './login/authentication/authentication.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
@@ -15,12 +16,16 @@ const routes: Routes = [
   { path: 'home', component: SkullTatooComponent },
   { path: 'agendamento', component: AgendamentoComponent },
   { path: 'skulltattoo', component: SkullTatooComponent },
+  { path: 'finalizados', component: FinalizadosComponent },
   { path: 'agendamentostattoo', component: AgendamentosTattooComponent },
+  {
+    path: 'agendamentostattoo/atualizartattoo/:id',
+    component: AtualizarTattooComponent,
+  },
   { path: 'agendamentospiercing', component: AgendamentosPiercingComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    // canActivate: [AuthGuard]
   },
 
   {
