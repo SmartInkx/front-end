@@ -1,122 +1,145 @@
 <html>
-<header>
-  <mat-toolbar>
-    <span>
-      <p class="navBar" mat-button routerLink="/home">Home</p>
-      <p class="navBar" mat-button routerLink="/agendamento">Agendamento</p>
-    </span>
-    <div class="btn">
-    </div>
-  </mat-toolbar>
-</header>
-<body>
-  <div class="container">
-    <div class="item">
-      <img src="../../assets/images/logo-head-removebg-preview.png">
-    </div>
-    <div class="title">
-      <p>Galeria</p>
-    </div>
-    <div class="banner">
-      <owl-carousel-o [options]="banneSlider">
-        <ng-template carouselSlide>
-          <img src="../../assets/images/abelha.jpeg" alt="Imagem de uma tatuagem de abelha" />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img src="../../assets/images/groot.jpeg" alt="Imagem de um desenho animado do filme guardiões da galáxia, groot" />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img src="../../assets/images/luas.jpeg" alt="Imagem de uma tatuagem de luas no braço" />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img src="../../assets/images/judy.jpeg" alt="Imagem de um desenho animado do filme zootopia" />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img src="../../assets/images/Madara.jpeg" alt="Imagem de um desenho animado naruto" />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img src="../../assets/images/marcelina.jpeg" alt="Imagem de um desenho animado Hora de Aventura, princesa jujuba" />
-        </ng-template>
-      </owl-carousel-o>
-    </div>
-    <div class="profissionais">
-      <p>Profissionais</p>
-    </div>
-    <div class="cards">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/kitsune.ttt/?igshid=YmMyMTA2M2Y="
-            >
-              <img
-                src="../../assets/images/preview.png"
-                alt="Página do instagram da tatuadora Kitsune"
-              />
-              Kitsune
-            </a></mat-card-title
-          >
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/kit.jpeg" alt="Foto de perfil da nossa tatuadora, Kitsune" />
-        <mat-card-content>
-          <p>
-            Tatuadora nos estilos Aquarela, Anime, Cartoons, Sketch e Fineline,
-            além de bodypiercing.
-          </p>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title>
-            <a
-              target="_blank"
-              href="https://instagram.com/wolfox.ttt?igshid=YmMyMTA2M2Y="
-            >
-              <img
-                src="../../assets/images/preview.png"
-                alt="Página do instagram do tatuador Wolfox"
-              />
-              Wolfox
-            </a>
-          </mat-card-title>
-        </mat-card-header>
-        <img
-          mat-card-image
-          src="../../assets/images/wolf.jpeg"
-          alt="Foto de perfil do nosso tatuador Leonardo"
-        />
-        <mat-card-content>
-          <p>
-            Tatuador especialista em coberturas e reformas. Tatua também nos
-            estilos Anime, Cartoons e Sketch.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="mapa">
-      <div class="mapa-conteudo">
-        <p>Localização</p>
+  <header>
+    <mat-toolbar>
+      <span>
+        <p class="navBar" mat-button routerLink="/home">Home</p>
+        <p class="navBar" mat-button routerLink="/agendamento">Agendamento</p>
+      </span>
+      <span>
+        <p class="navBar" mat-raised routerLink="/login">Administração</p>
+      </span>
+    </mat-toolbar>
+  </header>
+  <body>
+    <div class="container">
+      <div class="item">
+        <img src="../../assets/images/logo-head-removebg-preview.png" />
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117039.78951529282!2d-46.76449782622633!3d-23.550715819580333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff0983ae152f%3A0xfa9521af9cf0ad65!2sSkull%20tattoo!5e0!3m2!1spt-BR!2sbr!4v1653848559103!5m2!1spt-BR!2sbr"
-        width="250%"
-        height="350"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <div class="title">
+        <p>Galeria</p>
+      </div>
+      <div class="banner">
+        <owl-carousel-o [options]="banneSlider">
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/abelha.jpeg"
+              alt="Imagem de uma tatuagem de abelha"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/groot.jpeg"
+              alt="Imagem de um desenho animado do filme guardiões da galáxia, groot"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/luas.jpeg"
+              alt="Imagem de uma tatuagem de luas no braço"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/judy.jpeg"
+              alt="Imagem de um desenho animado do filme zootopia"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/Madara.jpeg"
+              alt="Imagem de um desenho animado naruto"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="../../assets/images/marcelina.jpeg"
+              alt="Imagem de um desenho animado Hora de Aventura, princesa jujuba"
+            />
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      <div class="profissionais">
+        <p>Profissionais</p>
+      </div>
+      <div class="cards">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/kitsune.ttt/?igshid=YmMyMTA2M2Y="
+              >
+                <img
+                  src="../../assets/images/preview.png"
+                  alt="Página do instagram da tatuadora Kitsune"
+                />
+                Kitsune
+              </a></mat-card-title
+            >
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="../../assets/images/kit.jpeg"
+            alt="Foto de perfil da nossa tatuadora, Kitsune"
+          />
+          <mat-card-content>
+            <p>
+              Tatuadora nos estilos Aquarela, Anime, Cartoons, Sketch e
+              Fineline, além de bodypiercing.
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>
+              <a
+                target="_blank"
+                href="https://instagram.com/wolfox.ttt?igshid=YmMyMTA2M2Y="
+              >
+                <img
+                  src="../../assets/images/preview.png"
+                  alt="Página do instagram do tatuador Wolfox"
+                />
+                Wolfox
+              </a>
+            </mat-card-title>
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="../../assets/images/wolf.jpeg"
+            alt="Foto de perfil do nosso tatuador Leonardo"
+          />
+          <mat-card-content>
+            <p>
+              Tatuador especialista em coberturas e reformas. Tatua também nos
+              estilos Anime, Cartoons e Sketch.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="mapa">
+        <div class="mapa-conteudo">
+          <p>Localização</p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117039.78951529282!2d-46.76449782622633!3d-23.550715819580333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff0983ae152f%3A0xfa9521af9cf0ad65!2sSkull%20tattoo!5e0!3m2!1spt-BR!2sbr!4v1653848559103!5m2!1spt-BR!2sbr"
+          width="250%"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
-  </div>
-  <footer>
-    <div class="copyright">
-      <p>&copy; Copyright Skull Tattoo - 2022</p>
-    </div>
-    <div class="copyright1">
-      <h1>.</h1>
-    </div>
-  </footer>
-</body>
+    <footer>
+      <div class="copyright">
+        <p>&copy; Copyright Skull Tattoo - 2022</p>
+      </div>
+      <div class="copyright1">
+        <h1>.</h1>
+      </div>
+    </footer>
+  </body>
 </html>
 <router-outlet></router-outlet>

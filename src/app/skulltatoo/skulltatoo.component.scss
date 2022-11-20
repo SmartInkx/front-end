@@ -20,18 +20,24 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+}
+
 mat-toolbar {
   background-color: #7c7c7c;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 span {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 50px;
   margin-left: 5px;
   font-style: normal;
@@ -67,10 +73,6 @@ button{
   justify-content: center;
   align-items: center;
   background: linear-gradient(#ffffff,#a0a0a0, #181818);
-
-  // img {
-  //   width: 50%;
-  // }
 }
 
 .title {

@@ -21,15 +21,26 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+}
+
 mat-toolbar {
   background-color: #7c7c7c;
 }
 
+.mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 span {
-  margin-left: 5px;
   display: flex;
   flex-direction: row;
   gap: 50px;
+  margin-left: 5px;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
