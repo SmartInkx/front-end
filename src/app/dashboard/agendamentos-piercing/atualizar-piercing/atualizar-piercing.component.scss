@@ -68,7 +68,7 @@ input.mat-input-element {
   width: 25%;
 }
 
-#hora{
+#hora {
   width: 25%;
 }
 
@@ -83,7 +83,7 @@ input.mat-input-element {
   gap: 10px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +91,7 @@ input.mat-input-element {
 }
 
 .example-card {
-  width: 50%
+  width: 50%;
 }
 
 .buttons {
@@ -103,17 +103,17 @@ input.mat-input-element {
     gap: 10px;
   }
 
-  .onedit:hover{
+  .onedit:hover {
     background-color: rgb(233, 233, 7);
     color: gray;
   }
 
-  .next:hover{
+  .next:hover {
     background-color: #c3bebe;
     color: white;
   }
 
-  .ondelete:hover{
+  .ondelete:hover {
     background-color: red;
     color: white;
   }
@@ -131,11 +131,10 @@ input.mat-input-element {
     margin-bottom: 2px;
   }
 
-  .submit:hover{
+  .submit:hover {
     background-color: #3f51b5;
     color: white;
   }
-
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -143,5 +142,5 @@ input.mat-input-element {
 }
 
 ::ng-deep.mat-form-field-ripple {
- background-color: gray !important;;
+  background-color: gray !important;
 }

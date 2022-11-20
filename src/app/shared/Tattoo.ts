@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 export class Tattoo {
     id: string = '';
     nome_cliente: string = '';
@@ -5,7 +6,12 @@ export class Tattoo {
     valor: string = '';
     local_tatuagem: string = '';
     telefone: string = '';
-    data: string = '';
+    data: DatePipe | string;
     horario: string = '';
-    estilo_tatuagem_id: string = '';
+    estilo_tatuagem: Estilo[];
+}
+export class Estilo {
+  id: number;
+  tipo: string = '';
+
 }

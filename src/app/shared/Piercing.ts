@@ -6,5 +6,10 @@ export class Piercing {
   telefone: string = '';
   data: string = '';
   horario: string = '';
-  material_piercing_id: string = '';
+  material_piercing: Material;
+}
+
+export class Material {
+  id: Number;
+  tipo: string;
 }

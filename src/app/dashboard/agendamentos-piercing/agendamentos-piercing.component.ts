@@ -1,10 +1,11 @@
+import { LoginService } from './../../login/login.service';
 import { AgendamentosPiercing } from './agendamentosPiercing';
 import { Component, OnInit } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalPiercingComponent } from 'src/app/modal-piercing/modal-piercing.component';
 import { ModalTattooComponent } from 'src/app/modal-tattoo/modal-tattoo.component';
 import { AgendamentosPiercingService } from './agendamentos-piercing.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-agendamentos-piercing',
@@ -18,11 +19,11 @@ export class AgendamentosPiercingComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private dateAdapter: DateAdapter<Date>,
-    private service: AgendamentosPiercingService
-  ) {
-    this.dateAdapter.setLocale('br');
-  }
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: AgendamentosPiercingService,
+    private serviceLogin: LoginService
+  ) { }
 
   ngOnInit(): void {
     this.service.listarPiercing().subscribe(data => this.agendamentosPiercing = data);
@@ -35,6 +36,7 @@ export class AgendamentosPiercingComponent implements OnInit {
     });
     dialogRef.afterClosed();
   }
+
   openDialog() {
     const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
@@ -46,10 +48,10 @@ export class AgendamentosPiercingComponent implements OnInit {
       .subscribe((data) => (this.agendamentosPiercing = data));
   }
 
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    return day !== 0 && day !== 7;
-  };
+  onEdit(id) {
+    this.service.atualizarPiercing(id);
+    this.router.navigate(['atualizarpiercing', id], { relativeTo: this.route });
+  }
 
   onDelete(agendamentos: AgendamentosPiercing): void {
     this.service.deletePiercing(agendamentos.id).subscribe(() => {
@@ -60,5 +62,10 @@ export class AgendamentosPiercingComponent implements OnInit {
       );
     });
     this.onList();
+  }
+
+  logout() {
+    this.serviceLogin.removerTokenLocalStorage();
+    this.router.navigate(['/home']);
   }
 }

@@ -1,10 +1,9 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from './../../login/login.service';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { ModalPiercingComponent } from 'src/app/modal-piercing/modal-piercing.component';
 import { ModalTattooComponent } from 'src/app/modal-tattoo/modal-tattoo.component';
-import { AgendamentosTattoo } from '../agendamentos-tattoo/agendamentosTattoo';
 import { Finalizados } from './finalizados';
 
 @Component({
@@ -15,8 +14,6 @@ import { Finalizados } from './finalizados';
 export class FinalizadosComponent implements OnInit {
   opened = false;
   panelOpenState = false;
-  // agendamentosTattoo: AgendamentosTattoo[];
-
   finalizados: Finalizados[] = [
     {
       id: 1,
@@ -40,9 +37,9 @@ export class FinalizadosComponent implements OnInit {
     'valor',
   ];
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private serviceLogin: LoginService, public router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   abreDialog() {
     const dialogRef = this.dialog.open(ModalTattooComponent, {
@@ -51,8 +48,14 @@ export class FinalizadosComponent implements OnInit {
     });
     dialogRef.afterClosed();
   }
+
   openDialog() {
     const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
+  }
+
+  logout() {
+    this.serviceLogin.removerTokenLocalStorage();
+    this.router.navigate(['/home']);
   }
 }

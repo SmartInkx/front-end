@@ -13,7 +13,7 @@
       <p class="icon text" routerLink="/finalizados">
         <mat-icon>done_outline</mat-icon>Finalizados
       </p>
-      <p class="icon text" routerLink="/home">
+      <p class="icon text" (click)="logout()" >
         <mat-icon>exit_to_app</mat-icon>Logout
       </p>
     </mat-sidenav>
@@ -38,7 +38,7 @@
             <h1>Agendamentos Pendentes</h1>
             <div class="cards">
               <mat-card id="cards">
-                Tattoo
+                <p id="cardTitle">Tattoo</p>
                 <img
                   src="../../assets/images/tattoo-dashboard.jpg"
                   id="images"
@@ -53,7 +53,7 @@
                 </div>
               </mat-card>
               <mat-card id="cards">
-                Piercing
+                <p id="cardTitle">Piercing</p>
                 <img
                   src="../../assets/images/piercing-dashboard.png"
                   id="images"
@@ -72,7 +72,7 @@
           <div class="divider">
             <div class="main">
               <mat-card id="cards">
-                <br />
+                <p id="cardTitle">Serviços Finalizados</p>
                 <img src="../../assets/images/done.jpg" id="images" />
                 <div class="buttons">
                   <button mat-raised-button routerLink="/finalizados">

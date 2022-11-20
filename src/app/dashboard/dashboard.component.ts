@@ -1,7 +1,9 @@
+import { LoginService } from './../login/login.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalTattooComponent } from '../modal-tattoo/modal-tattoo.component';
 import { ModalPiercingComponent } from '../modal-piercing/modal-piercing.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,6 +16,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    public route: Router,
+    public serviceLogin: LoginService
   ) { }
 
   ngOnInit(): void {}
@@ -25,8 +29,14 @@ export class DashboardComponent implements OnInit {
     });
     dialogRef.afterClosed();
   }
+  
   openDialog() {
     const dialogRef = this.dialog.open(ModalPiercingComponent);
     dialogRef.afterClosed();
+  }
+
+  logout() {
+    this.serviceLogin.removerTokenLocalStorage();
+    this.route.navigate(['/home']);
   }
 }

@@ -1,11 +1,11 @@
+import { LoginService } from './../../login/login.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AgendamentosTattooService } from './agendamentos-tattoo.service';
 import { Component, OnInit } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalPiercingComponent } from 'src/app/modal-piercing/modal-piercing.component';
 import { ModalTattooComponent } from 'src/app/modal-tattoo/modal-tattoo.component';
-import { AgendamentosTattoo } from './agendamentosTattoo';
+import { AgendamentosTattoo, Estilo } from './agendamentosTattoo';
 
 @Component({
   selector: 'app-agendamentos-tattoo',
@@ -21,11 +21,9 @@ export class AgendamentosTattooComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     public dialog: MatDialog,
-    private dateAdapter: DateAdapter<Date>,
-    private service: AgendamentosTattooService
-  ) {
-    this.dateAdapter.setLocale('br');
-  }
+    private service: AgendamentosTattooService,
+    private serviceLogin: LoginService
+  ) { }
 
   ngOnInit(): void {
     this.onList();
@@ -54,8 +52,7 @@ export class AgendamentosTattooComponent implements OnInit {
     this.service.atualizarTatto(id);
     this.router.navigate(['atualizartattoo', id], { relativeTo: this.route });
   }
-  
- //verificar onList
+
   onDelete(agendamentos: AgendamentosTattoo): void {
     this.service.deleteTattoo(agendamentos.id).subscribe(() => {
       this.service.showText(
@@ -65,5 +62,10 @@ export class AgendamentosTattooComponent implements OnInit {
       );
     });
     this.onList();
+  }
+
+  logout() {
+    this.serviceLogin.removerTokenLocalStorage();
+    this.router.navigate(['/home']);
   }
 }

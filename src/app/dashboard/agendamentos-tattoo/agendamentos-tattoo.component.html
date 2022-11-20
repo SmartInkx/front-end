@@ -12,7 +12,7 @@
     <p class="icon text" routerLink="/finalizados">
       <mat-icon>done_outline</mat-icon>Finalizados
     </p>
-    <p class="icon text" routerLink="/home">
+    <p class="icon text" (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>Logout
     </p>
   </mat-sidenav>
@@ -79,7 +79,7 @@
                   <mat-form-field class="form-input">
                     <mat-label>Estilo</mat-label>
                     <input matInput readonly="true" disabled="true" />
-                    {{ agendamentos.estilo_tatuagem_id }}
+                    {{ agendamentos.estilo_tatuagem }}
                   </mat-form-field>
                 </div>
               </div>

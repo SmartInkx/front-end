@@ -12,7 +12,7 @@
     <p class="icon text" routerLink="/finalizados">
       <mat-icon>done_outline</mat-icon>Finalizados
     </p>
-    <p class="icon text" routerLink="/home">
+    <p class="icon text" (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>Logout
     </p>
   </mat-sidenav>
@@ -79,13 +79,13 @@
                   <mat-form-field class="form-input">
                     <mat-label>Material</mat-label>
                     <input matInput readonly="true" disabled="true" />
-                    {{ agendamentos.material_piercing_id }}
+                    {{ agendamentos.material_piercing }}
                   </mat-form-field>
                 </div>
               </div>
               <div class="buttons">
                 <div class="changes">
-                  <button mat-raised-button class="onedit">
+                  <button mat-raised-button class="onedit" routerLink="/agendamentospiercing/atualizarpiercing/{{ agendamentos.id }}">
                     <mat-icon>edit</mat-icon>EDITAR
                   </button>
                   <button mat-raised-button matStepperNext class="next">
@@ -114,18 +114,11 @@
               <mat-form-field class="form-field" id="data">
                 <mat-label>Escolha uma data</mat-label>
                 <input
-                  matInput
-                  [matDatepickerFilter]="myFilter"
-                  [matDatepicker]="picker"
+                  matInput type="date"
                   readonly="true"
                   disabled="true"
                 />
                 {{ agendamentos.data }}
-                <mat-datepicker-toggle
-                  matSuffix
-                  [for]="picker"
-                ></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
               <mat-form-field class="form-field" id="hora">
                 <mat-label>Escolha um hórario</mat-label>

@@ -7,5 +7,10 @@ export interface AgendamentosPiercing {
   nome_profissional: string;
   telefone: string;
   valor: number,
-  material_piercing_id: string;
+  material_piercing: Material[];
+}
+
+export interface Material {
+  id: number;
+  tipo: string;
 }

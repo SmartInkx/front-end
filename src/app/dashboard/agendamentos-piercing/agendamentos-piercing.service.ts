@@ -11,7 +11,7 @@ import { take } from 'rxjs';
 export class AgendamentosPiercingService {
   api = `${environment.API}agendamentopiercing`;
 
-  constructor(private http: HttpClient, private toastr: ToastrService) {}
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
 
   showText(titulo: string, mensagem: string, tipo: string) {
     this.toastr.show(
@@ -24,6 +24,16 @@ export class AgendamentosPiercingService {
 
   public listarPiercing() {
     return this.http.get<AgendamentosPiercing[]>(this.api);
+  }
+
+  public listarPiercingId(id: string) {
+    return this.http.get<AgendamentosPiercing>(`${this.api}/${id}`).pipe(take(1));
+  }
+
+  public atualizarPiercing(agendamentos: AgendamentosPiercing) {
+    return this.http
+      .put<AgendamentosPiercing>(`${this.api}/${agendamentos.id}`, agendamentos)
+      .pipe(take(1));
   }
 
   public deletePiercing(id) {

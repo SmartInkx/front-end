@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class AgendamentosTattooService {
   api = `${environment.API}agendamentotatuagem`;
 
-  constructor(private http: HttpClient, private toastr: ToastrService) {}
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
 
   public showText(titulo: string, mensagem: string, tipo: string) {
     this.toastr.show(

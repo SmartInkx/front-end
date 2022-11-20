@@ -133,3 +133,10 @@ input.mat-input-element {
   }
 
 }
+::ng-deep .mat-focused .mat-form-field-label {
+  color: gray !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+ background-color: gray !important;;
+}

@@ -1,23 +1,25 @@
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
-
+import { catchError, map, Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  api = `${environment.API}usuarios/logar`;
 
-  api = `${environment.API}usuarios/cadastrar`;
-
-  constructor(
-    private httpClient: HttpClient
-  ) { }
+  constructor(private httpClient: HttpClient, private toastr: ToastrService) {}
 
   public login(email: string, senha: string) {
-    return this.httpClient.post(this.api, {email, senha}, {responseType: 'json'}).pipe(
-      map((data) => this.setTokenLocalStorage(data))
+    return this.httpClient
+      .post(this.api, { email, senha }, { responseType: 'json' })
+      .pipe(map((data) => this.setTokenLocalStorage(data)),
+      catchError((err) => {
+        this.removerTokenLocalStorage();
+        throw 'Falha ao efetuar login'
+      })
     )
   }
 
@@ -25,12 +27,21 @@ export class LoginService {
     return localStorage.getItem(environment.token);
   }
 
-  private setTokenLocalStorage(response: any){
-    const {type, token, _} = response;
-    localStorage.setItem(environment.token, token)
+  private setTokenLocalStorage(response): void {
+    const { type, token, _ } = response;
+    localStorage.setItem(environment.token, token);
   }
 
-  private removerTokenLocalStorage(): void {
+  public removerTokenLocalStorage(): void {
     localStorage.removeItem(environment.token);
+  }
+
+  public showText(titulo: string, mensagem: string, tipo: string) {
+    this.toastr.show(
+      mensagem,
+      titulo,
+      { closeButton: true, progressBar: true },
+      tipo
+    );
   }
 }

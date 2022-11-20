@@ -45,21 +45,21 @@
                       <mat-label>Nome</mat-label>
                       <input
                         matInput
-                        [(ngModel)]="agendamentosTattoo.nome_cliente"
+                        [(ngModel)]="agendamentosPiercing.nome_cliente"
                       />
                     </mat-form-field>
                     <mat-form-field class="form-field">
                       <mat-label>Celular</mat-label>
                       <input
                         matInput
-                        [(ngModel)]="agendamentosTattoo.telefone"
+                        [(ngModel)]="agendamentosPiercing.telefone"
                       />
                     </mat-form-field>
                     <mat-form-field class="form-field">
                       <mat-label>Local</mat-label>
                       <input
                         matInput
-                        [(ngModel)]="agendamentosTattoo.local_tatuagem"
+                        [(ngModel)]="agendamentosPiercing.local_piercing"
                       />
                     </mat-form-field>
                   </div>
@@ -68,27 +68,21 @@
                       <mat-label>Profissional</mat-label>
                       <input
                         matInput
-                        [(ngModel)]="agendamentosTattoo.nome_profissional"
+                        [(ngModel)]="agendamentosPiercing.nome_profissional"
                       />
                     </mat-form-field>
                     <mat-form-field class="form-input">
                       <mat-label>Valor</mat-label>
-                      <input matInput [(ngModel)]="agendamentosTattoo.valor" />
+                      <input
+                        matInput
+                        [(ngModel)]="agendamentosPiercing.valor"
+                      />
                     </mat-form-field>
-                    <mat-form-field class="form-input">
-                      <mat-label>Estilo</mat-label>
+                    <mat-form-field>
+                      <mat-label>Material</mat-label>
                       <mat-select>
                         <mat-option>
-                          {{ agendamentosTattoo.estilo_tatuagem }}
-                        </mat-option>
-                        <mat-option>
-                          {{ agendamentosTattoo.estilo_tatuagem }}
-                        </mat-option>
-                        <mat-option>
-                          {{ agendamentosTattoo.estilo_tatuagem }}
-                        </mat-option>
-                        <mat-option>
-                          {{ agendamentosTattoo.estilo_tatuagem }}
+                          {{ agendamentosPiercing.material_piercing }}
                         </mat-option>
                       </mat-select>
                     </mat-form-field>
@@ -129,7 +123,7 @@
                   <input
                     matInput
                     type="date"
-                    [(ngModel)]="agendamentosTattoo.data"
+                    [(ngModel)]="agendamentosPiercing.data"
                   />
                 </mat-form-field>
                 <mat-form-field class="form-field" id="hora">
@@ -138,7 +132,7 @@
                     matInput
                     type="time"
                     step="2"
-                    [(ngModel)]="agendamentosTattoo.horario"
+                    [(ngModel)]="agendamentosPiercing.horario"
                   />
                 </mat-form-field>
                 <div class="buttons">
@@ -148,7 +142,7 @@
                   <button
                     mat-raised-button
                     class="submit"
-                    (click)="updateTattoo()"
+                    (click)="updatePiercing()"
                   >
                     <mat-icon>done_all</mat-icon>ENVIAR
                   </button>
