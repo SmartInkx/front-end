@@ -53,7 +53,7 @@ export class AtualizarPiercingComponent implements OnInit {
     const month = date.getMonth();
     const day = date.getDate();
     this.agendamentosPiercing.data = `${day}-${month}-${year}`;
-    // this.agendamentosPiercing.pendente = false;
+    this.agendamentosPiercing.pendente = false;
     this.service.atualizarPiercing(this.agendamentosPiercing).subscribe(() => {
       this.service.showText(
         'SISTEMA',

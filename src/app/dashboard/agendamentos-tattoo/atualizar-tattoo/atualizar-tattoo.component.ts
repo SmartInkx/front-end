@@ -53,7 +53,7 @@ export class AtualizarTattooComponent implements OnInit {
     const month = date.getMonth();
     const day = date.getDate();
     this.agendamentosTattoo.data = `${day}-${month}-${year}`;
-    // this.agendamentosTattoo.pendente = false;
+    this.agendamentosTattoo.pendente = false;
     this.service.atualizarTatto(this.agendamentosTattoo).subscribe(() => {
       this.service.showText(
         'SISTEMA',
