@@ -3,13 +3,17 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  background-color: rgb(200, 200, 200);
+  background: linear-gradient(#a0a0a0, #ffffff);
   width: 180px;
 }
 
 mat-icon {
   margin-right: 6px;
   cursor: pointer;
+}
+
+#icon {
+  color: #ffffff;
 }
 
 .icon {
@@ -33,16 +37,32 @@ mat-toolbar {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  color: #ffffff;
+  background-color: #a0a0a0;
+}
+
+mat-stepper {
+  background-color: #e0e0e0;
+}
+
+mat-step {
+  background-color: #ffffff;
 }
 
 mat-expansion-panel {
   margin-bottom: 5px;
+  background-color: #e0e0e0;
+}
+
+body {
+  background: linear-gradient(#7d7a7a, #a0a0a0, #ffffff);
 }
 
 h1 {
   padding: 15px;
   display: flex;
   justify-content: center;
+  color: #ffffff;
 }
 
 .container {
@@ -100,8 +120,8 @@ input.mat-input-element {
   }
 
   .onedit:hover{
-    background-color: rgb(233, 233, 7);
-    color: gray;
+    background-color: rgba(218, 218, 3, 0.941);
+    color: #ffffff;
   }
 
   .next:hover{
@@ -133,6 +153,13 @@ input.mat-input-element {
   }
 
 }
+
+button:hover {
+  color: white;
+  background-color: #7c7c7c;
+}
+
+
 ::ng-deep .mat-focused .mat-form-field-label {
   color: gray !important;
 }
@@ -140,3 +167,4 @@ input.mat-input-element {
 ::ng-deep.mat-form-field-ripple {
  background-color: gray !important;;
 }
+

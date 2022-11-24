@@ -1,15 +1,19 @@
-import { AgendamentosPiercing } from './agendamentosPiercing';
+import { AgendamentosPiercing, Material } from './agendamentosPiercing';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ToastrService } from 'ngx-toastr';
-import { take } from 'rxjs';
+import { Observable, take } from 'rxjs';
+import { Finalizados } from '../finalizados/finalizados';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AgendamentosPiercingService {
   api = `${environment.API}agendamentopiercing`;
+  apiListTrue = `${environment.API}agendamentopiercing/pendente/true`;
+  apiListFalse = `${environment.API}agendamentopiercing/pendente/false`;
+  apiMaterial = `${environment.API}materialpiercing`;
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
@@ -22,12 +26,20 @@ export class AgendamentosPiercingService {
     );
   }
 
+  public listarMaterial(): Observable<Material[]> {
+    return this.http.get<Material[]>(this.apiMaterial)
+  }
+
   public listarPiercing() {
-    return this.http.get<AgendamentosPiercing[]>(this.api);
+    return this.http.get<AgendamentosPiercing[]>(this.apiListTrue);
   }
 
   public listarPiercingId(id: string) {
     return this.http.get<AgendamentosPiercing>(`${this.api}/${id}`).pipe(take(1));
+  }
+
+  public listarAll() {
+    return this.http.get<Finalizados[]>(this.apiListFalse);
   }
 
   public atualizarPiercing(agendamentos: AgendamentosPiercing) {

@@ -3,13 +3,17 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  background-color: rgb(200, 200, 200);
+  background: linear-gradient(#a0a0a0, #ffffff);
   width: 180px;
 }
 
 mat-icon {
   margin-right: 6px;
   cursor: pointer;
+}
+
+#icon {
+  color: #ffffff;
 }
 
 .icon {
@@ -25,7 +29,6 @@ mat-icon {
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
-  color: black;
 }
 
 mat-toolbar {
@@ -33,16 +36,32 @@ mat-toolbar {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  color: #ffffff;
+  background-color: #a0a0a0;
+}
+
+mat-stepper {
+  background-color: #e0e0e0;
+}
+
+mat-step {
+  background-color: #ffffff;
 }
 
 mat-expansion-panel {
   margin-bottom: 5px;
+  background-color: #e0e0e0;
+}
+
+body {
+  background: linear-gradient(#7d7a7a, #a0a0a0, #ffffff);
 }
 
 h1 {
   padding: 15px;
   display: flex;
   justify-content: center;
+  color: #ffffff;
 }
 
 .container {
@@ -92,6 +111,7 @@ input.mat-input-element {
 
 .example-card {
   width: 50%;
+  background-color: #e0e0e0;
 }
 
 .buttons {
@@ -135,6 +155,11 @@ input.mat-input-element {
     background-color: #3f51b5;
     color: white;
   }
+}
+
+button:hover {
+  color: white;
+  background-color: #7c7c7c;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {

@@ -29,7 +29,8 @@ mat-toolbar {
   background-color: #7c7c7c;
 }
 
-.mat-toolbar-row, .mat-toolbar-single-row {
+.mat-toolbar-row,
+.mat-toolbar-single-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,7 +53,7 @@ span {
   font-family: "Montserrat", sans-serif;
 }
 
-button{
+button {
   color: #181818;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -65,14 +66,13 @@ button{
   border-radius: 7px;
   margin-right: 5px;
   font-family: "Montserrat", sans-serif;
-
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#ffffff,#a0a0a0, #181818);
+  background: linear-gradient(#ffffff, #a0a0a0, #181818);
 }
 
 .title {

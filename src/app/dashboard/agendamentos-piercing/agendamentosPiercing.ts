@@ -6,11 +6,13 @@ export interface AgendamentosPiercing {
   nome_cliente: string;
   nome_profissional: string;
   telefone: string;
-  valor: number,
-  material_piercing: Material[];
+  valor: number;
+  pendente: boolean;
+  material_piercing: Material;
 }
 
 export interface Material {
   id: number;
   tipo: string;
+  valor: number;
 }

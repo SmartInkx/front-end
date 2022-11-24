@@ -1,3 +1,4 @@
+import { FinalizadosTattooComponent } from './dashboard/finalizados/finalizados-tattoo/finalizados-tattoo.component';
 //COMPONENTES
 import { FinalizadosComponent } from './dashboard/finalizados/finalizados.component';
 import { AtualizarTattooComponent } from './dashboard/agendamentos-tattoo/atualizar-tattoo/atualizar-tattoo.component';
@@ -14,6 +15,7 @@ import { AgendamentosPiercingComponent } from './dashboard/agendamentos-piercing
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './login/auth.guard';
+import { FinalizadosPiercingComponent } from './dashboard/finalizados/finalizados-piercing/finalizados-piercing.component';
 
 
 const routes: Routes = [
@@ -49,6 +51,16 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'finalizados-tattoo',
+    component: FinalizadosTattooComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'finalizados-piercing',
+    component: FinalizadosPiercingComponent,
     canActivate: [AuthGuard]
   },
 

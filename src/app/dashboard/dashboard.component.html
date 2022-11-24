@@ -13,7 +13,7 @@
       <p class="icon text" routerLink="/finalizados">
         <mat-icon>done_outline</mat-icon>Finalizados
       </p>
-      <p class="icon text" (click)="logout()" >
+      <p class="icon text" (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>Logout
       </p>
     </mat-sidenav>
@@ -32,58 +32,60 @@
           </button>
         </div>
       </mat-toolbar>
-      <div class="main">
-        <div class="title">
+      <body>
+        <div class="main">
+          <div class="title">
+            <mat-card id="card">
+              <h1>Agendamentos Pendentes</h1>
+              <div class="cards">
+                <mat-card id="cards">
+                  <p id="cardTitle">Tattoo</p>
+                  <img
+                    src="../../assets/images/tattoo-dashboard.jpg"
+                    id="images"
+                  />
+                  <div class="buttons">
+                    <button mat-raised-button routerLink="/agendamentostattoo">
+                      Acessar
+                    </button>
+                  </div>
+                </mat-card>
+                <mat-card id="cards">
+                  <p id="cardTitle">Piercing</p>
+                  <img
+                    src="../../assets/images/piercing-dashboard.png"
+                    id="images"
+                  />
+                  <div class="buttons">
+                    <button
+                      mat-raised-button
+                      routerLink="/agendamentospiercing"
+                    >
+                      Acessar
+                    </button>
+                  </div>
+                </mat-card>
+              </div>
+            </mat-card>
+          </div>
           <mat-card id="card">
-            <h1>Agendamentos Pendentes</h1>
-            <div class="cards">
-              <mat-card id="cards">
-                <p id="cardTitle">Tattoo</p>
-                <img
-                  src="../../assets/images/tattoo-dashboard.jpg"
-                  id="images"
-                />
-                <div class="buttons">
-                  <button
-                  mat-raised-button
-                  routerLink="/agendamentostattoo"
-                >
-                  Acessar
-                </button>
-                </div>
-              </mat-card>
-              <mat-card id="cards">
-                <p id="cardTitle">Piercing</p>
-                <img
-                  src="../../assets/images/piercing-dashboard.png"
-                  id="images"
-                />
-                <div class="buttons">
-                  <button mat-raised-button routerLink="/agendamentospiercing">
-                    Acessar
-                  </button>
-                </div>
-              </mat-card>
+            <h1>Finalizados</h1>
+            <div class="divider">
+              <div class="main">
+                <mat-card id="cards">
+                  <p id="cardTitle">Serviços Finalizados</p>
+                  <img src="../../assets/images/done.jpg" id="images" />
+                  <div class="buttons">
+                    <button mat-raised-button routerLink="/finalizados">
+                      Acessar
+                    </button>
+                  </div>
+                </mat-card>
+              </div>
             </div>
           </mat-card>
         </div>
-        <mat-card id="card">
-          <h1>Finalizados</h1>
-          <div class="divider">
-            <div class="main">
-              <mat-card id="cards">
-                <p id="cardTitle">Serviços Finalizados</p>
-                <img src="../../assets/images/done.jpg" id="images" />
-                <div class="buttons">
-                  <button mat-raised-button routerLink="/finalizados">
-                    Acessar
-                  </button>
-                </div>
-              </mat-card>
-            </div>
-          </div>
-        </mat-card>
-      </div>
+      </body>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </router-outlet>

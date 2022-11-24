@@ -47,6 +47,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMaskModule } from 'ngx-mask';
 import { MatSelectModule } from '@angular/material/select';
+import { FinalizadosTattooComponent } from './dashboard/finalizados/finalizados-tattoo/finalizados-tattoo.component';
+import { FinalizadosPiercingComponent } from './dashboard/finalizados/finalizados-piercing/finalizados-piercing.component';
 
 
 @NgModule({
@@ -67,6 +69,8 @@ import { MatSelectModule } from '@angular/material/select';
     AtualizarTattooComponent,
     AtualizarPiercingComponent,
     FinalizadosComponent,
+    FinalizadosTattooComponent,
+    FinalizadosPiercingComponent,
 
   ],
   imports: [
