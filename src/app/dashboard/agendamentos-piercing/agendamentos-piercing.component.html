@@ -32,7 +32,7 @@
       </div>
     </mat-toolbar>
     <body>
-      <h1>Agendamentos Pendentes - Piercing</h1>
+      <h1>Agendamentos Pendentes - Piercing <button class="refresh" (click)="onList()"><mat-icon id="icon" class="refresh-icon">refresh</mat-icon></button></h1>
       <mat-accordion>
         <mat-expansion-panel
           (opened)="panelOpenState = true"

@@ -32,7 +32,7 @@
       </div>
     </mat-toolbar>
     <body>
-      <h1>Agendamentos Pendentes - Tattoo</h1>
+      <h1>Agendamentos Pendentes - Tattoo <button class="refresh" (click)="onList()"><mat-icon id="icon" class="refresh-icon">refresh</mat-icon></button></h1>
       <mat-accordion>
         <mat-expansion-panel
           (opened)="panelOpenState = true"
@@ -80,7 +80,7 @@
                     <mat-form-field class="form-input">
                       <mat-label>Estilo</mat-label>
                       <input matInput readonly="true" disabled="true" />
-                      {{ agendamentos.estilo_tatuagem.tipo }}
+                      {{ agendamentos.estilo_tatuagem }}
                     </mat-form-field>
                   </div>
                 </div>

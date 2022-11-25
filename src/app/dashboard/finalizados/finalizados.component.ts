@@ -14,24 +14,6 @@ import { Finalizados } from './finalizados';
 export class FinalizadosComponent implements OnInit {
   opened = false;
   panelOpenState = false;
-  finalizados: Finalizados[] = [
-    {
-      data: '15/11/2022',
-      horario: '15:00',
-      nome_cliente: 'Davi Soares',
-      nome_profissional: 'Kit',
-      telefone: '11982125779',
-      valor: '50,00',
-    },
-  ];
-
-  displayedColumns: string[] = [
-    'nome_cliente',
-    'nome_profissional',
-    'data',
-    'telefone',
-    'valor',
-  ];
 
   constructor(public dialog: MatDialog, private serviceLogin: LoginService, public router: Router) { }
 

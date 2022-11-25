@@ -30,7 +30,7 @@ export class AtualizarPiercingComponent implements OnInit {
     const id = this.activatedRouter.snapshot.paramMap.get('id')
     this.service.listarMaterial().subscribe((material) => {
       this.material = material
-    })
+    });
     this.service.listarPiercingId(id).subscribe(tatoo => this.agendamentosPiercing = tatoo)
   }
 

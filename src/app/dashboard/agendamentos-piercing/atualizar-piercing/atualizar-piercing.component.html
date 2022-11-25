@@ -83,7 +83,7 @@
                       <mat-form-field>
                         <mat-label>Material</mat-label>
                         <mat-select matInput [(ngModel)]="agendamentosPiercing.material_piercing">
-                          <mat-option *ngFor="let materials of material" [value]="material">
+                          <mat-option *ngFor="let materials of material" [value]="materials">
                             {{ materials.tipo }}
                           </mat-option>
                         </mat-select>
